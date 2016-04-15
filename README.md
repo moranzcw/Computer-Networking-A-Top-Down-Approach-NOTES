@@ -1,2 +1,2 @@
 # CoolPython
-一些很酷的Python程序
+Short and Cool Python programs.
