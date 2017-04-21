@@ -1,10 +1,8 @@
 # 编程作业1：Web服务器
 
-### 描述
+### 作业描述
 
-##### 作业描述
-
-《自顶向下方法》中第二章末尾给出了此编程作业的简单描述：
+《计算机网络：自顶向下方法》中第二章末尾给出了此编程作业的简单描述：
 
 > 在这个编程作业中，你将用Python语言开发一个简单的Web服务器，它仅能处理一个请求。具体而言，你的Web服务器将：
 > 1. 当一个客户（浏览器）联系时创建一个连接套接字；
@@ -16,9 +14,11 @@
 >
 > 在配套网站中，我们提供了用于该服务器的框架代码，我们提供了用于该服务器的框架代码。你的任务是完善该代码，运行服务器，通过在不同主机上运行的浏览器发送请求来测试该服务器。如果运行你服务器的主机上已经有一个Web服务器在运行，你应当为该服务器使用一个不同于80端口的其他端口。
 
-##### 详细作业描述
+### 详细描述
 
-书中也给出了有关该作业详细描述和部分代码的文件地址，可以在文件[Socket1_WebServer.pdf](assignment/Socket1_WebServer.pdf)中查看。  以下为文件内容翻译：
+官方给出了该作业的详细文档：[Socket1_WebServer.pdf](assignment/Socket1_WebServer.pdf)
+
+以下为文件内容翻译：
 
 > #### 套接字编程作业1：Web服务器
 >
@@ -39,44 +39,44 @@
 > “HelloWorld.html”是您放在服务器目录中的文件。还要注意使用冒号后的端口号。您需要使用服务器代码中使用的端口号来替换此端口号。在上面的例子中，我们使用了端口号6789. 浏览器应该显示HelloWorld.html的内容。如果省略“:6789”，浏览器将使用默认端口80，只有当您的服务器正在端口80监听时，才会从服务器获取网页。
 >
 > 然后用客户端尝试获取服务器上不存在的文件。你应该会得到一个“404 Not Found”消息。
-
-##### Web服务器代码骨架
-
-```python
-#import socket module
-from socket import *
-serverSocket = socket(AF_INET, SOCK_STREAM) 
-#Prepare a sever socket 
-#Fill in start 
-#Fill in end 
-while True:     
-	#Establish the connection    
-	print 'Ready to serve...'     
-	connectionSocket, addr =   #Fill in start  #Fill in end
-	try:         
-		message =   #Fill in start  #Fill in end
-		filename = message.split()[1]                          
-		f = open(filename[1:])
-		outputdata = #Fill in start  #Fill in end
-		#Send one HTTP header line into socket         
-		#Fill in start         
-		#Fill in end    
-        
-		#Send the content of the requested file to the client
-		for i in range(0, len(outputdata)):
-			connectionSocket.send(outputdata[i])
-		connectionSocket.close()
-	except IOError:
-		#Send response message for file not found
-		#Fill in start
-		#Fill in end
-		
-		#Close client socket
-		#Fill in start
-		#Fill in end             
-serverSocket.close()
-```
-
+> ##### Web服务器代码骨架
+> ```python
+> #import socket module
+> from socket import *
+> serverSocket = socket(AF_INET, SOCK_STREAM) 
+> #Prepare a sever socket 
+> #Fill in start 
+> #Fill in end 
+> while True:     
+> 	#Establish the connection    
+> 	print 'Ready to serve...'     
+> 	connectionSocket, addr =   #Fill in start  #Fill in end
+> 	try:         
+> 		message =   #Fill in start  #Fill in end
+> 		filename = message.split()[1]                          
+> 		f = open(filename[1:])
+> 		outputdata = #Fill in start  #Fill in end
+> 		#Send one HTTP header line into socket         
+> 		#Fill in start         
+> 		#Fill in end    
+> 	    
+> 		#Send the content of the requested file to the client
+> 		for i in range(0, len(outputdata)):
+> 			connectionSocket.send(outputdata[i])
+> 		connectionSocket.close()
+> 	except IOError:
+> 		#Send response message for file not found
+> 		#Fill in start
+> 		#Fill in end
+> 		
+> 		#Close client socket
+> 		#Fill in start
+> 		#Fill in end             
+> serverSocket.close()
+> ```
 
 
 ### 代码
+```
+
+```
