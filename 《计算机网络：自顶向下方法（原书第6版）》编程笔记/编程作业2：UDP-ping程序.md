@@ -1,5 +1,3 @@
-
-
 # 编程作业2：UDP- ping程序
 
 ### 作业描述
@@ -22,7 +20,7 @@
 >
 > 在本实验中，您将学习使用Python进行UDP套接字编程的基础知识。您将学习如何使用UDP套接字发送和接收数据报，以及如何设置适当的套接字超时。在实验中，您将熟悉Ping应用程序及其在计算统计信息（如丢包率）中的作用。
 >
-> 您首先需要研究一个用Python编写的简单的ping服务器程序，并实现对应的客户端程序。这些程序提供的功能类似于现代操作系统中可用的标准ping程序功能。然而，我们的程序使用更简单的UDP协议，而不是标准互联网控制消息协议（ICMP）来进行通信。 ping协议允许客户端机器发送一个数据包到远程机器，并使远程机器将数据包返回到客户（称为回显）的操作。除了其他用途，ping协议允许主机计算它到其他机器的往返时间。
+> 您首先需要研究一个用Python编写的简单的ping服务器程序，并实现对应的客户端程序。这些程序提供的功能类似于现代操作系统中可用的标准ping程序功能。然而，我们的程序使用更简单的UDP协议，而不是标准互联网控制消息协议（ICMP）来进行通信。 ping协议允许客户端机器发送一个数据包到远程机器，并使远程机器将数据包返回到客户（称为回显）的操作。另外，ping协议允许主机计算它到其他机器的往返时间。
 >
 > 以下是Ping服务器程序的完整代码。你的任务是写出Ping客户端程序。
 >
@@ -61,7 +59,7 @@
 >
 > ##### 数据包丢失
 >
-> UDP为应用程序提供了不可靠的传输服务。消息可能因为路由器队列溢出，硬件错误或其他原因，而在网络中丢失。但由于在区网络中丢包很少甚至不存在，所以在本实验室的服务器程序添加人为损失来模拟网络丢包的影响。服务器创建一个随机整数，由它它确定传入的数据包是否丢失。
+> UDP为应用程序提供了不可靠的传输服务。消息可能因为路由器队列溢出，硬件错误或其他原因，而在网络中丢失。但由于在内网中很丢包甚至不丢包，所以在本实验室的服务器程序添加人为损失来模拟网络丢包的影响。服务器创建一个随机整数，由它确定传入的数据包是否丢失。
 >
 > ##### 客户端代码
 >
@@ -89,6 +87,75 @@
 
 
 ### 代码
+**UDPPinger.py**
+
+```python
+from socket import *
+import time
+
+serverName = '191.101.232.165' # 服务器地址，本例中使用一台远程主机
+serverPort = 12000 # 服务器指定的端口
+clientSocket = socket(AF_INET, SOCK_DGRAM) # 创建UDP套接字，使用IPv4协议
+clientSocket.settimeout(1) # 设置套接字超时值1秒
+
+for i in range(0, 10):
+	sendTime = time.time()
+	message = ('Ping %d %s' % (i+1, sendTime)).encode() # 生成数据报，编码为bytes以便发送
+	try:
+		clientSocket.sendto(message, (serverName, serverPort)) # 将信息发送到服务器
+		modifiedMessage, serverAddress = clientSocket.recvfrom(1024) # 从服务器接收信息，同时也能得到服务器地址
+		rtt = time.time() - sendTime # 计算往返时间
+		print('Sequence %d: Reply from %s    RTT = %.3fs' % (i+1, serverName, rtt)) # 显示信息
+	except Exception as e:
+		print('Sequence %d: Request timed out' % (i+1))
+		
+clientSocket.close() # 关闭套接字
 ```
 
+**UDPPingerServer.py**
+
+```python
+# UDPPingerServer.py
+# We will need the following module to generate randomized lost packets import random
+from socket import *
+import random
+
+# Create a UDP socket
+# Notice the use of SOCK_DGRAM for UDP packets
+serverSocket = socket(AF_INET, SOCK_DGRAM)
+# Assign IP address and port number to socket
+serverSocket.bind(('', 12000))
+
+while True:
+	# Generate random number in the range of 0 to 10
+	rand = random.randint(0, 10)
+	# Receive the client packet along with the address it is coming from
+	message, address = serverSocket.recvfrom(1024)
+	# Capitalize the message from the client
+	message = message.upper()
+	# If rand is less is than 4, we consider the packet lost and do not respond
+	if rand < 4:
+		continue
+	# Otherwise, the server responds
+	serverSocket.sendto(message, address)
 ```
+
+**代码文件**
+
+[UDPPinger.py](source/UDPPinger.py)
+
+[UDPPingerServer.py](source/UDPPingerServer.py)
+
+##### 运行
+
+**服务器端：**
+
+在一台主机上运行`UDPPingerServer.py`，作为接收ping程序数据的服务器。
+
+效果如下：
+
+![](image/UDPPingerServer.png)
+
+在另一台主机上运行`UDPPinger.py`，效果如下：
+
+![](image/UDPPinger.png)

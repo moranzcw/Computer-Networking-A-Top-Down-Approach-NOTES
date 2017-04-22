@@ -24,7 +24,7 @@ while True:
 		connectionSocket.close()
 	except IOError:
 		#Send response message for file not found
-		header = ' HTTP/1.1 404 Found'
+		header = ' HTTP/1.1 404 Not Found'
 		connectionSocket.send(header.encode())
 		
 		#Close client socket
