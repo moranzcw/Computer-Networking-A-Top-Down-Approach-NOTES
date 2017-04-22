@@ -138,10 +138,10 @@ serverSocket.close()
 
 一切正常的话，可以看到如下页面：
 
-![](image/browser1.png)
+![](image/Browser1.png)
 
 输入新地址"http://XXX.XXX.XXX.XXX:6789/abc.html"，以获取服务器上不存在的`abc.html`。
 
 将出现以下页面（注意页面中的"HTTP ERROR 404"）：
 
-![](image/browser2.png)
+![](image/Browser2.png)
