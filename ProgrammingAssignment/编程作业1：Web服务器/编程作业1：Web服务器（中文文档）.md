@@ -1,6 +1,6 @@
 # 编程作业1：Web服务器（中文文档）
 
-官方给出了该作业的详细英文文档：[Socket1_WebServer.pdf](assignment/Socket1_WebServer.pdf)
+官方给出了该作业的详细英文文档：[Socket1_WebServer.pdf](Socket1_WebServer.pdf)
 
 以下文档内容为笔者给出的中文翻译：
 

@@ -18,7 +18,7 @@
 
 见本目录下官方文档：[Socket1_WebServer.pdf](Socket1_WebServer.pdf)
 
-以及中文翻译：[编程作业1：Web服务器（中文文档）.md]编程作业1：Web服务器（中文文档）.md)
+以及中文翻译：[编程作业1：Web服务器（中文文档）.md](编程作业1：Web服务器（中文文档）.md)
 
 
 ### 代码
