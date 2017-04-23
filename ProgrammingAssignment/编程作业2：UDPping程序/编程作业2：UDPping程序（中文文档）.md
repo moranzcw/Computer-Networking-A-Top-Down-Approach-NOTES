@@ -1,8 +1,6 @@
-# 编程作业2：UDP- ping程序
+# 编程作业2：UDPping程序（中文文档）
 
-### 详细描述
-
-官方给出了该作业的详细英文文档：[Socket2_UDPpinger.pdf](assignment/Socket2_UDPpinger.pdf)
+官方给出了该作业的详细英文文档：[Socket2_UDPpinger.pdf](Socket2_UDPpinger.pdf)
 
 以下文档内容为笔者给出的中文翻译：
 
