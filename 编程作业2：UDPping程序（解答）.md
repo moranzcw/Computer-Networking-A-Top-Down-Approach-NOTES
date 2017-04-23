@@ -156,6 +156,8 @@ while True:
 
 ![](image/UDPPingerServer.png)
 
+**客户端：**
+
 在另一台主机上运行`UDPPinger.py`，效果如下：
 
 ![](image/UDPPinger.png)
