@@ -1,6 +1,6 @@
 # 编程作业2：UDPping程序（解答）
 
-### 作业描述
+## 作业描述
 
 《计算机网络：自顶向下方法》中第二章末尾给出了此编程作业的简单描述：
 
@@ -10,13 +10,13 @@
 >
 > 在此作业中，我们给出服务器的完整代码（在配套网站中可以找到。你的任务是编写客户代码，该代码与服务器代码非常类似。建议你先仔细学习服务器的代码，然后编写你的客户代码，可以不受限制地从服务器代码中剪贴代码行。
 
-### 详细描述
+## 详细描述
 
-见本目录下官方文档：[Socket2_UDPpinger.pdf](Socket2_UDPpinger.pdf)
+**见官方文档：[Socket2_UDPpinger.pdf](Socket2_UDPpinger.pdf)**
 
-以及中文翻译：[编程作业2：UDPping程序（中文文档）.md](编程作业2：UDPping程序（中文文档）.md)
+**以及笔者翻译：[编程作业2：UDPping程序（中文文档）.md](编程作业2：UDPping程序（中文文档）.md)**
 
-### 代码
+## 代码
 **UDPPinger.py**
 
 ```python
@@ -76,7 +76,7 @@ while True:
 
 [UDPPingerServer.py](source/UDPPingerServer.py)
 
-### 运行
+## 运行
 
 **服务器端：**
 
