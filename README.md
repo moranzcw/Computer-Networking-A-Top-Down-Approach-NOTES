@@ -10,14 +10,14 @@
   * [TCPServer.py](Notes/source/TCPServer.py)
 
 ### 编程作业：
-* [编程作业1：Web服务器（中文文档）.md](ProgrammingAssignment/编程作业1：Web服务器/编程作业1：Web服务器（中文文档）.md)
-* [编程作业1：Web服务器（解答）.md](ProgrammingAssignment/编程作业1：Web服务器/编程作业1：Web服务器（解答）.md)
-  * [HelloWorld.html](ProgrammingAssignment/编程作业1：Web服务器/source/HelloWorld.html)
-  * [WebServer.py](ProgrammingAssignment/编程作业1：Web服务器/source/WebServer.py)
+* [编程作业1-Web服务器(中文文档).md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器(中文文档).md)
+* [编程作业1-Web服务器(解答).md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器(解答).md)
+  * [HelloWorld.html](ProgrammingAssignment/编程作业1-Web服务器/source/HelloWorld.html)
+  * [WebServer.py](ProgrammingAssignment/编程作业1-Web服务器/source/WebServer.py)
 
-* [编程作业2：UDPping程序（中文文档）.md](ProgrammingAssignment/编程作业2：UDPping程序/编程作业2：UDPping程序（中文文档）.md)
-* [编程作业2：UDPping程序（解答）.md](ProgrammingAssignment/编程作业2：UDPping程序/编程作业2：UDPping程序（解答）.md)
-  * [UDPPinger.py](ProgrammingAssignment/编程作业2：UDPping程序/source/UDPPinger.py)
-  * [UDPPingerServer.py](ProgrammingAssignment/编程作业2：UDPping程序/source/UDPPingerServer.py)
+* [编程作业2-UDPping程序(中文文档).md](ProgrammingAssignment/编程作业2-UDPping程序/编程作业2-UDPping程序(中文文档).md)
+* [编程作业2-UDPping程序(解答).md](ProgrammingAssignment/编程作业2-UDPping程序/编程作业2-UDPping程(解答).md)
+  * [UDPPinger.py](ProgrammingAssignment/编程作业2-UDPping程序/source/UDPPinger.py)
+  * [UDPPingerServer.py](ProgrammingAssignment/编程作业2-UDPping程序/source/UDPPingerServer.py)
 
 
