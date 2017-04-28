@@ -21,7 +21,7 @@
 
 #### 编程作业1-Web服务器
 
-* 官方文档：[Socket1_WebServer.pdf](ProgrammingAssignment/编程作业2-UDPping程序/Socket1_WebServer.pdf)
+* 官方文档：[Socket1_WebServer.pdf](ProgrammingAssignment/编程作业1-Web服务器/Socket1_WebServer.pdf)
 * 中文文档：[编程作业1-Web服务器-中文文档.md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器-中文文档.md)
 * 解答：[编程作业1-Web服务器-解答.md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器-解答.md)
 * 代码：
