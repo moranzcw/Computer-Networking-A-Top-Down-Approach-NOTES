@@ -23,7 +23,7 @@
 
 * 官方文档：[Socket1_WebServer.pdf](ProgrammingAssignment/编程作业1-Web服务器/Socket1_WebServer.pdf)
 * 中文文档：[编程作业1-Web服务器-中文文档.md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器-中文文档.md)
-* 解答：[编程作业1-Web服务器-解答.md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器-解答.md)
+* 解答：[编程作业1-Web服务器.md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器.md)
 * 代码：
   * [HelloWorld.html](ProgrammingAssignment/编程作业1-Web服务器/source/HelloWorld.html)
   * [WebServer.py](ProgrammingAssignment/编程作业1-Web服务器/source/WebServer.py)
@@ -32,10 +32,18 @@
 
 * 官方文档：[Socket2_UDPpinger.pdf](ProgrammingAssignment/编程作业2-UDPping程序/Socket2_UDPpinger.pdf)
 * 中文文档：[编程作业2-UDPping程序-中文文档.md](ProgrammingAssignment/编程作业2-UDPping程序/编程作业2-UDPping程序-中文文档.md)
-* 解答：[编程作业2-UDPping程序-解答.md](ProgrammingAssignment/编程作业2-UDPping程序/编程作业2-UDPping程序-解答.md)
+* 解答：[编程作业2-UDPping程序.md](ProgrammingAssignment/编程作业2-UDPping程序/编程作业2-UDPping程序.md)
 * 代码：
   * [UDPPinger.py](ProgrammingAssignment/编程作业2-UDPping程序/source/UDPPinger.py)
   * [UDPPingerServer.py](ProgrammingAssignment/编程作业2-UDPping程序/source/UDPPingerServer.py)
+
+#### 编程作业3-邮件客户端
+
+* 官方文档：[Socket2_UDPpinger.pdf](ProgrammingAssignment/编程作业3-邮件客户端/Socket3_SMTP.pdf)
+* 中文文档：[编程作业2-UDPping程序-中文文档.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端-中文文档.md)
+* 解答：[编程作业2-UDPping程序.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端.md)
+* 代码：
+  * [SMTPClient.py](ProgrammingAssignment/编程作业3-邮件客户端/source/SMTPClient.py)
 
 ## Wireshark实验：
 
