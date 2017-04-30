@@ -1,4 +1,5 @@
 from socket import *
+import base64
 
 # Mail content
 subject = "I love computer networks!"
@@ -14,8 +15,8 @@ fromaddress = "******@163.com"
 toaddress = "******@qq.com"
 
 # Auth information (Encode with base64)
-username = "******"
-password = "******"
+username = base64.b64encode(fromaddress.encode()).decode()
+password = base64.b64encode("******".encode()).decode()
 
 # Create socket called clientSocket and establish a TCP connection with mailserver
 clientSocket = socket(AF_INET, SOCK_STREAM) 
