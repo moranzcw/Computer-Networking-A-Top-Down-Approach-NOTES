@@ -39,9 +39,9 @@
 
 #### 编程作业3-邮件客户端
 
-* 官方文档：[Socket2_UDPpinger.pdf](ProgrammingAssignment/编程作业3-邮件客户端/Socket3_SMTP.pdf)
-* 中文文档：[编程作业2-UDPping程序-中文文档.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端-中文文档.md)
-* 解答：[编程作业2-UDPping程序.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端.md)
+* 官方文档：[Socket3_SMTP.pdf](ProgrammingAssignment/编程作业3-邮件客户端/Socket3_SMTP.pdf)
+* 中文文档：[编程作业3-邮件客户端-中文文档.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端-中文文档.md)
+* 解答：[编程作业3-邮件客户端.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端.md)
 * 代码：
   * [SMTPClient.py](ProgrammingAssignment/编程作业3-邮件客户端/source/SMTPClient.py)
 
