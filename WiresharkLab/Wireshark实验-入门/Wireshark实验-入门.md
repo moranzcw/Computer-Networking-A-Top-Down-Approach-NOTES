@@ -30,7 +30,7 @@
 
 分组嗅探器的第二个组件是**分组分析器(packet analyzer)**，显示协议消息中所有字段的内容。为了做到这一点，分组分析器必须“理解”协议交换的所有消息的结构。 例如，假设我们有兴趣在图1中的HTTP协议交换的消息中显示各种字段。分组分析器了解以太网帧的格式，因此可以识别以太网帧中的IP数据报。它还可以理解IP数据报格式，从而可以提取IP数据报中的TCP段。 最后，它理解TCP段结构，因此可以提取TCP段中包含的HTTP消息。 最终，它还理解HTTP协议，因此，就可以知道HTTP消息的第一部分将包含字符串“GET”，“POST”或“HEAD”，如书中的图2-8所示。
 
-我们将使用Wireshark分组嗅探器(http://www.wireshark.org/)进行这些实验，从而显示在协议栈不同级别的协议发送/接收的消息的内容。(从技术上讲，Wireshark是一个使用计算机中的分组捕获库的分组分析器)。 Wireshark是一种免费的网络协议分析器，可在Windows，Mac和Linux / Unix计算机上运行。 它是我们实验室的理想分组分析器 - 因为它稳定，具有庞大的用户基础和文档支持，包括用户指南(http://www.wireshark.org/docs/wsug_html_chunked/)，手册(http://www.wireshark.org/docs/man-pages/)和常见问题细节(http://www.wireshark.org/faq.html)，丰富的功能，包括分析数百种协议，以及精心设计的用户界面。 它可以运行在使用以太网，串行(PPP和SLIP)，802.11无线局域网和许多其他链路层技术的计算机上(如果操作系统支持Wireshark这样做)。
+我们将使用Wireshark分组嗅探器( http://www.wireshark.org/ )进行这些实验，从而显示在协议栈不同级别的协议发送/接收的消息的内容。(从技术上讲，Wireshark是一个使用计算机中的分组捕获库的分组分析器)。 Wireshark是一种免费的网络协议分析器，可在Windows，Mac和Linux / Unix计算机上运行。 它是我们实验室的理想分组分析器 - 因为它稳定，具有庞大的用户基础和文档支持，包括用户指南( http://www.wireshark.org/docs/wsug_html_chunked/ )，手册( http://www.wireshark.org/docs/man-pages/ )和常见问题细节( http://www.wireshark.org/faq.html )，丰富的功能，包括分析数百种协议，以及精心设计的用户界面。 它可以运行在使用以太网，串行(PPP和SLIP)，802.11无线局域网和许多其他链路层技术的计算机上(如果操作系统支持Wireshark这样做)。
 
 ### 获取Wireshark
 
