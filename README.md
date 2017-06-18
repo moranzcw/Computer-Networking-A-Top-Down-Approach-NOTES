@@ -54,6 +54,6 @@
 
 #### Wireshark实验-HTTP
 
-* 官方文档：[Wireshark_HTTP_v7.0.pdf](WiresharkLab/Wireshark实验-入门/Wireshark_HTTP_v7.0.pdf)
-* 中文文档：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-入门/Wireshark实验-HTTP.md)
+* 官方文档：[Wireshark_HTTP_v7.0.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v7.0.pdf)
+* 中文文档：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-HTTP/Wireshark实验-HTTP.md)
 
