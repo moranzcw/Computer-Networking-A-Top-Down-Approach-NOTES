@@ -38,6 +38,8 @@ nslookup www.mit.edu
 
 nslookup -type=NS mit.edu
 
+
+
 在这个例子中，我们提供了选项"-type=NS"和域名"mit.edu"。这将导致nslookup将类型为NS的记录发送到默认的本地DNS服务器。换句话说，“请给我发送mit.edu的权威DNS的主机名” （当不使用-type选项时，nslookup使用默认值，即查询A类记录。）上述屏幕截图中显示的答案首先指示提供答案的DNS服务器（这是默认本地DNS服务器）以及三个MIT名称服务器。这些服务器中的每一个确实是麻省理工学院校园主机的权威DNS服务器。然而，nslookup也表明答案是※非权威性的，这意味着这个答案来自某个服务器的缓存，而不是来自权威的MIT DNS服务器。最后，答案还包括麻省理工学院权威DNS服务器的IP地址。 （即使nslookup生成的NS类型查询没有明确要求IP地址，本地DNS服务器返回这些※免费，nslookup显示结果。）
 
 现在终于考虑了第三个命令：
