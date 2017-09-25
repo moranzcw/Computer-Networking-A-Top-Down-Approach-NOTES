@@ -14,7 +14,7 @@
 
 **官方文档：[Socket2_UDPpinger.pdf](Socket2_UDPpinger.pdf)**
 
-**翻译：[编程作业2-UDPping程序-中文文档.md](编程作业2-UDPping程序-中文文档.md)**
+**翻译：[作业2-UDPping程序-翻译.md](作业2-UDPping程序-翻译.md)**
 
 ## 实现
 

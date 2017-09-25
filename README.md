@@ -28,7 +28,7 @@
 
 #### 作业 4：多线程Web代理服务器 (Page121)
 
-- 官方文档：[Socket3_SMTP.pdf](SocketProgrammingAssignment/作业4-多线程Web代理服务器/Socket4_ProxyServer.pdf)
+- 官方文档：[Socket4_ProxyServer.pdf](SocketProgrammingAssignment/作业4-多线程Web代理服务器/Socket4_ProxyServer.pdf)
 - 翻译：[作业4-多线程Web代理服务器-翻译.md](SocketProgrammingAssignment/作业4-多线程Web代理服务器/作业4-多线程Web代理服务器-翻译.md)
 - 解答：[作业4-多线程Web代理服务器-解答.md](SocketProgrammingAssignment/作业4-多线程Web代理服务器/作业4-多线程Web代理服务器-解答.md)
 

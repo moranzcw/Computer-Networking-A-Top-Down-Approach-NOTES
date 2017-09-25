@@ -12,7 +12,7 @@
 
 **官方文档：[Socket4_ProxyServer.pdf](Socket4_ProxyServer.pdf)**
 
-**翻译：[编程作业4-多线程Web代理服务器-中文文档.md](编程作业4-多线程Web代理服务器-中文文档.md)**
+**翻译：[作业4-多线程Web代理服务器-翻译.md](作业4-多线程Web代理服务器-翻译.md)**
 
 ## 实现
 
