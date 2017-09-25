@@ -1,4 +1,4 @@
-# 编程作业1 - Web服务器
+# 套接字编程作业1：Web服务器
 
 ## 作业描述
 
@@ -16,9 +16,9 @@
 
 ## 详细描述
 
-**见官方文档：[Socket1_WebServer.pdf](Socket1_WebServer.pdf)**
+**官方文档：[Socket1_WebServer.pdf](Socket1_WebServer.pdf)**
 
-**以及笔者翻译：[编程作业1-Web服务器-中文文档.md](编程作业1-Web服务器-中文文档.md)**
+**翻译：[编程作业1-Web服务器-中文文档.md](编程作业1-Web服务器-中文文档.md)**
 
 ## 实现
 

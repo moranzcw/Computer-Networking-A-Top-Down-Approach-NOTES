@@ -1,4 +1,4 @@
-# 编程作业2 - UDPping程序 - 中文文档
+# 套接字编程作业2：UDPping程序
 
 **官方英文文档：[Socket2_UDPpinger.pdf](Socket2_UDPpinger.pdf)**
 

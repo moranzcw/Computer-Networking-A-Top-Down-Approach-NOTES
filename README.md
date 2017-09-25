@@ -1,7 +1,110 @@
-# 《计算机网络－自顶向下方法》笔记
+# 《计算机网络－自顶向下方法(原书第6版)》笔记
 
-本仓库就《计算机网络－自顶向下方法（原书第6版）》书中的一些程序实例，以及每章节末尾的编程作业和Wireshark实验给出笔记，官方文档的中文翻译，解答和代码。
-## 笔记
+《计算机网络－自顶向下方法(原书第6版)》编程作业的解答和代码，Wireshark实验的官方文档的翻译。
+
+***
+
+## 套接字编程作业
+
+### 第2章 - 应用层
+
+#### 作业 1：Web服务器 (Page120)
+
+* 官方文档：[Socket1_WebServer.pdf](SocketProgrammingAssignment/作业1-Web服务器/Socket1_WebServer.pdf)
+* 翻译：[作业1-Web服务器-翻译.md](SocketProgrammingAssignment/作业1-Web服务器/作业1-Web服务器-翻译.md)
+* 解答：[作业1-Web服务器-解答.md](SocketProgrammingAssignment/作业1-Web服务器/作业1-Web服务器-解答.md)
+
+#### 作业 2：UDPping程序 (Page121)
+
+* 官方文档：[Socket2_UDPpinger.pdf](SocketProgrammingAssignment/作业2-UDPping程序/Socket2_UDPpinger.pdf)
+* 翻译：[作业2-UDPping程序-翻译.md](SocketProgrammingAssignment/作业2-UDPping程序/作业2-UDPping程序-翻译.md)
+* 解答：[作业2-UDPping程序-解答.md](SocketProgrammingAssignment/作业2-UDPping程序/作业2-UDPping程序-解答.md)
+
+#### 作业 3：邮件客户端 (Page121)
+
+* 官方文档：[Socket3_SMTP.pdf](SocketProgrammingAssignment/作业3-邮件客户端/Socket3_SMTP.pdf)
+* 翻译：[作业3-邮件客户端-翻译.md](SocketProgrammingAssignment/作业3-邮件客户端/作业3-邮件客户端-翻译.md)
+* 解答：[作业3-邮件客户端-解答.md](SocketProgrammingAssignment/作业3-邮件客户端/作业3-邮件客户端-解答.md)
+
+#### 作业 4：多线程Web代理服务器 (Page121)
+
+- 官方文档：[Socket3_SMTP.pdf](SocketProgrammingAssignment/作业4-多线程Web代理服务器/Socket4_ProxyServer.pdf)
+- 翻译：[作业4-多线程Web代理服务器-翻译.md](SocketProgrammingAssignment/作业4-多线程Web代理服务器/作业4-多线程Web代理服务器-翻译.md)
+- 解答：[作业4-多线程Web代理服务器-解答.md](SocketProgrammingAssignment/作业4-多线程Web代理服务器/作业4-多线程Web代理服务器-解答.md)
+
+### 第4章 - 网络层
+
+#### 作业5：ICMP ping (Page287)
+
+TODO...
+
+***
+
+## 编程作业
+
+### 第3章 - 运输层
+
+#### 编程作业：实现一个可靠运输协议 (Page200)
+
+TODO...
+
+### 第4章 - 网络层
+
+#### 编程作业 (Page287)
+
+TODO...
+
+### 第7章 - 多媒体网络
+
+#### 编程作业 (Page439)
+
+TODO...
+
+***
+
+## Wireshark实验
+
+#### Wireshark实验：入门 (Page52)
+
+* 官方文档：[Wireshark_Intro_v7.0.pdf](WiresharkLab/Wireshark实验-入门/Wireshark_Intro_v7.0.pdf)
+* 翻译：[Wireshark实验-入门.md](WiresharkLab/Wireshark实验-入门/Wireshark实验-入门.md)
+
+#### Wireshark实验：HTTP (Page121)
+
+* 官方文档：[Wireshark_HTTP_v7.0.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v7.0.pdf)
+* 翻译：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-HTTP/Wireshark实验-HTTP.md)
+
+#### Wireshark实验：DNS (Page121)
+
+TODO...
+
+#### Wireshark实验：探究TCP (Page200)
+
+TODO...
+
+#### Wireshark实验：探究UDP (Page201)
+
+TODO...
+
+#### Wireshark实验 (Page288)
+
+TODO...
+
+#### Wireshark实验 (Page339)
+
+TODO...
+
+#### Wireshark实验 (Page385)
+
+TODO...
+
+#### Wireshark实验 (Page496)
+
+TODO...
+
+***
+
+## 其他笔记
 
 #### UDP套接字编程
 
@@ -16,44 +119,3 @@
 * 代码：
   * [TCPClient.py](Notes/source/TCPClient.py)
   * [TCPServer.py](Notes/source/TCPServer.py)
-
-## 编程作业
-
-#### 编程作业1-Web服务器
-
-* 官方文档：[Socket1_WebServer.pdf](ProgrammingAssignment/编程作业1-Web服务器/Socket1_WebServer.pdf)
-* 中文文档：[编程作业1-Web服务器-中文文档.md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器-中文文档.md)
-* 解答：[编程作业1-Web服务器.md](ProgrammingAssignment/编程作业1-Web服务器/编程作业1-Web服务器.md)
-* 代码：
-  * [HelloWorld.html](ProgrammingAssignment/编程作业1-Web服务器/source/HelloWorld.html)
-  * [WebServer.py](ProgrammingAssignment/编程作业1-Web服务器/source/WebServer.py)
-
-#### 编程作业2-UDPping程序
-
-* 官方文档：[Socket2_UDPpinger.pdf](ProgrammingAssignment/编程作业2-UDPping程序/Socket2_UDPpinger.pdf)
-* 中文文档：[编程作业2-UDPping程序-中文文档.md](ProgrammingAssignment/编程作业2-UDPping程序/编程作业2-UDPping程序-中文文档.md)
-* 解答：[编程作业2-UDPping程序.md](ProgrammingAssignment/编程作业2-UDPping程序/编程作业2-UDPping程序.md)
-* 代码：
-  * [UDPPinger.py](ProgrammingAssignment/编程作业2-UDPping程序/source/UDPPinger.py)
-  * [UDPPingerServer.py](ProgrammingAssignment/编程作业2-UDPping程序/source/UDPPingerServer.py)
-
-#### 编程作业3-邮件客户端
-
-* 官方文档：[Socket3_SMTP.pdf](ProgrammingAssignment/编程作业3-邮件客户端/Socket3_SMTP.pdf)
-* 中文文档：[编程作业3-邮件客户端-中文文档.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端-中文文档.md)
-* 解答：[编程作业3-邮件客户端.md](ProgrammingAssignment/编程作业3-邮件客户端/编程作业3-邮件客户端.md)
-* 代码：
-  * [SMTPClient.py](ProgrammingAssignment/编程作业3-邮件客户端/source/SMTPClient.py)
-
-## Wireshark实验：
-
-#### Wireshark实验-入门
-
-* 官方文档：[Wireshark_Intro_v7.0.pdf](WiresharkLab/Wireshark实验-入门/Wireshark_Intro_v7.0.pdf)
-* 中文文档：[Wireshark实验-入门.md](WiresharkLab/Wireshark实验-入门/Wireshark实验-入门.md)
-
-#### Wireshark实验-HTTP
-
-* 官方文档：[Wireshark_HTTP_v7.0.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v7.0.pdf)
-* 中文文档：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-HTTP/Wireshark实验-HTTP.md)
-

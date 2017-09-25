@@ -1,4 +1,4 @@
-# 编程作业4 - 多线程Web代理服务器 - 中文文档
+# 套接字编程作业4：多线程Web代理服务器
 
 **官方英文文档：[Socket4_ProxyServer.pdf](Socket4_ProxyServer.pdf)**
 

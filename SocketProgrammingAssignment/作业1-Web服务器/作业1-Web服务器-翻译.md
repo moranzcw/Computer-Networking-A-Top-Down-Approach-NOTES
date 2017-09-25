@@ -1,4 +1,4 @@
-# 编程作业1 - Web服务器 - 中文文档
+# 套接字编程作业1：Web服务器
 
 **官方英文文档：[Socket1_WebServer.pdf](Socket1_WebServer.pdf)**
 
