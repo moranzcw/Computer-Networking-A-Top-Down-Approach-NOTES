@@ -1,6 +1,6 @@
 # Wireshark实验 - HTTP
 
-**官方英文文档：[Wireshark_Intro_v6.1.pdf](Wireshark_Intro_v6.1.pdf)**  
+**官方英文文档：[Wireshark_HTTP_v6.1.pdf](Wireshark_HTTP_v6.1.pdf)**
 
 **以下内容为笔者翻译：**
 
