@@ -66,7 +66,7 @@ TODO...
 
 #### Wireshark实验：入门 (Page52)
 
-* 官方文档：[Wireshark_Intro_v6.0.pdf](WiresharkLab/Wireshark实验-入门/Wireshark_Intro_v6.0.pdf)
+* 官方文档：[Wireshark_Intro_v6.0.pdf](WiresharkLab/Wireshark实验-Intro/Wireshark_Intro_v6.0.pdf)
 * 翻译：[Wireshark实验-Intro.md](WiresharkLab/Wireshark实验-Intro/Wireshark实验-Intro.md)
 
 #### Wireshark实验：HTTP (Page121)
