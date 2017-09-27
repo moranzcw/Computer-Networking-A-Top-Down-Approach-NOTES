@@ -1,18 +1,18 @@
 # Wireshark实验 - HTTP
 
-**官方英文文档：[Wireshark_Intro_v6.1.pdf](Wireshark_Intro_v6.1.pdf)**  
+**官方英文文档：[Wireshark_Intro_v7.0.pdf](Wireshark_Intro_v7.0.pdf)**  
 
 **以下内容为笔者翻译：**
 
 ------
 
-## Wireshark 实验:  HTTP v6.1
+## Wireshark 实验:  HTTP v7.0
 
-***《计算机网络：自顶向下方法（第6版）》*补充材料，J.F. Kurose and K.W. Ross**
+***《计算机网络：自顶向下方法（第七版）》*补充材料，J.F. Kurose and K.W. Ross**
 
 “不闻不若闻之，闻之不若见之，见之不若知之，知之不若行之。” ——中国谚语 
 
-© 2005-2012, J.F Kurose and K.W. Ross, All Rights Reserved
+© 2005-2016, J.F Kurose and K.W. Ross, All Rights Reserved
 
 ***
 
@@ -111,7 +111,7 @@
 
 - 启动您的浏览器。
 - 启动Wireshark数据包嗅探器。
-- 在浏览器中输入以下URL http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html 您的浏览器应显示包含两个图像的短HTML文件。这两个图像在基本HTML文件中被引用。也就是说，图像本身不包含在HTML文件中；相反，图像的URL包含在已下载的HTML文件中。如书中所述，您的浏览器将不得不从指定的网站中检索这些图标。我们的出版社的图标是从 www.aw-bc.com 网站检索的。而我们第5版（我们最喜欢的封面之一）的封面图像存储在manic.cs.umass.edu服务器。
+- 在浏览器中输入以下URL http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html 您的浏览器应显示包含两个图像的短HTML文件。这两个图像在基本HTML文件中被引用。也就是说，图像本身不包含在HTML文件中；相反，图像的URL包含在已下载的HTML文件中。如书中所述，您的浏览器将不得不从指定的网站中检索这些图标。我们的出版社的图标是从gaia.cs.umass.edu网站检索的。而我们第5版（我们最喜欢的封面之一）的封面图像存储在caite.cs.umass.edu服务器（这是cs.umass.edu中的两个不同的Web服务器）。
 - 停止Wireshark数据包捕获，并在display-filter-specification窗口中输入“http”，以便只显示捕获的HTTP消息。
 - （注意：如果无法连接网络并运行Wireshark，则可以使用http-ethereal-trace-4数据包跟踪来回答以下问题；请参见上文注释。）
 
