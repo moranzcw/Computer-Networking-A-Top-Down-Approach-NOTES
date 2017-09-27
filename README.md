@@ -66,12 +66,12 @@ TODO...
 
 #### Wireshark实验：入门 (Page52)
 
-* 官方文档：[Wireshark_Intro_v7.0.pdf](WiresharkLab/Wireshark实验-入门/Wireshark_Intro_v7.0.pdf)
-* 翻译：[Wireshark实验-入门.md](WiresharkLab/Wireshark实验-入门/Wireshark实验-入门.md)
+* 官方文档：[Wireshark_Intro_v6.0.pdf](WiresharkLab/Wireshark实验-入门/Wireshark_Intro_v6.0.pdf)
+* 翻译：[Wireshark实验-Intro.md](WiresharkLab/Wireshark实验-Intro/Wireshark实验-Intro.md)
 
 #### Wireshark实验：HTTP (Page121)
 
-* 官方文档：[Wireshark_HTTP_v7.0.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v7.0.pdf)
+* 官方文档：[Wireshark_HTTP_v6.1.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v6.1.pdf)
 * 翻译：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-HTTP/Wireshark实验-HTTP.md)
 
 #### Wireshark实验：DNS (Page121)
