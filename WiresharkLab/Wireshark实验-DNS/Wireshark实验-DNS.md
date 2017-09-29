@@ -81,73 +81,61 @@
 
 ### 3. 使用Wireshark追踪DNS
 
-现在，我们熟悉nslookup和ipconfig，我们准备好了一些严肃的事情。让*首先捕获由普通Websurfing活动生成的DNS数据包。
+现在，我们熟悉`nslookup`和`ipconfig`，我们准备好了一些正经的事情。首先让我们捕获一些由常规上网活动生成的DNS数据包。
 
-？使用ipconfig清空主机中的DNS缓存。
-？打开浏览器并清空浏览器缓存。 （使用Internet Explorer，转到工具菜单并选择Internet选项;然后在常规选项卡中选择删除文件。）
-？打开Wireshark，然后在过滤器中输入※ip.addr ==your_IP_address§，在那里您可以使用ipconfig获取your_IP_address。此过滤器将删除既不发起也不发往主机的所有数据包。
-？在Wireshark中启动数据包捕获。
-？使用浏览器，请访问网页：http：//www.ietf.org
-？停止数据包捕获。
+* 使用*ipconfig*清空主机中的DNS缓存。
+* 打开浏览器并清空浏览器缓存。 （若使用Internet Explorer，转到**工具**菜单并选择**Internet选项**；然后在**常规**选项卡中选择删除文件。）
+* 打开Wireshark，然后在过滤器中输入“ip.addr==your_IP_address”，您可以先使用*ipconfig*获取你的IP地址。此过滤器将删除既从你主机不发出也不发往你主机的所有数据包。
+* 在Wireshark中启动数据包捕获。
+* 使用浏览器访问网页： http://www.ietf.org
+* 停止数据包捕获。
 
-如果您无法在实时网络连接上运行Wireshark，则可以在其中一个作者的计算机2上按照上述步骤下载捕获的数据包跟踪文件。回答下列问题。只要有可能，在回答下面的问题时，您应该在用于回答所问问题的踪迹中输入打包的数据包。注释打印输出3来解释你的答案。要打印数据包，请使用文件 - >打印，仅选择所选数据包，选择数据包摘要行，并选择需要回答问题的最小数据包详细信息。
+如果您无法在你的网络连接上运行Wireshark，则可以下载一个捕获了数据包的文件，这个文件是本书作者在自己计算机上 按照上述步骤捕获的（原文注：Download the zip file http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip and extract the file dnsethereal-trace-1. The traces in this zip file were collected by Wireshark running on one of the author’s computers, while performing the steps indicated in the Wireshark lab. Once you have downloaded the trace, you can load it into Wireshark and view the trace using the File pull down menu, choosing Open, and then selecting the dns-ethereal-trace-1 trace file. ）。回答下列问题。您应该在解答中尽可能展示你使用了哪些你捕获到的数据包，并注释出来（原文注：What do we mean by “annotate”? If you hand in a paper copy, please highlight where in the printout you’ve found the answer and add some text (preferably with a colored pen) noting what you found in what you ‘ve highlight. If you hand in an electronic copy, it would be great if you could also highlight and annotate. ）。若要打印数据包，请使用*文件*->*打印*，只勾选*仅选中分组*，和*概要行*，并选中你所需要用于解答问题的数据包。
 
-4.找到DNS查询和响应消息。然后通过UDP或TCP发送？
+4. 找到DNS查询和响应消息。它们是否通过UDP或TCP发送？
 5. DNS查询消息的目标端口是什么？ DNS响应消息的源端口是什么？
-  6.发送DNS查询消息的IP地址？使用ipconfig来确定本地DNS服务器的IP地址。这两个IP地址是否相同？
-  7.检查DNS查询消息。什么※类型的DNS查询是吗？查询消息是否包含任何※答案？
-  8.检查DNS响应消息。提供了多少个答案？这些答案包含什么？
+6. DNS查询消息发送到哪个IP地址？使用ipconfig来确定本地DNS服务器的IP地址。这两个IP地址是否相同？
+7. 检查DNS查询消息。DNS查询是什么"Type"的？查询消息是否包含任何"answers"？
+8. 检查DNS响应消息。提供了多少个"answers"？这些答案具体包含什么？
+9. 考虑从您主机发送的后续TCP SYN数据包。 SYN数据包的目的IP地址是否与DNS响应消息中提供的任何IP地址相对应？
+10. 这个网页包含一些图片。在获取每个图片前，您的主机是否都发出了新的DNS查询？
 
-2下载zip文件http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip并提取文件dnsethereal-trace-1。在执行Wireshark实验室中指出的步骤的同时，这个zip文件中的痕迹由Wireshark收集，在其中一个作者的计算机上运行。一旦下载了跟踪，您可以将其加载到Wireshark中，并使用文件下拉菜单，选择打开，然后选择dns-ethereal-trace-1跟踪文件来查看跟踪。
+现在让我们玩玩*nslookup*（原文注：If you are unable to run Wireshark and capture a trace file, use the trace file dns-ethereal-trace-2 in the zip file http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip  ）。
 
-3※注释是什么意思？如果您提交了纸质文本，请突出显示您在哪里找到答案，并添加一些文字（最好用彩色笔），注意您在什么中突出显示的内容。如果您提交电子版本，如果您也可以突出显示和注释，那将是非常好的。
+* 启动数据包捕获。
+* 使用nslookup查询 www.mit.edu 
+* 停止数据包捕获。
 
-9.考虑您的主机发送的后续TCP SYN数据包。 SYN数据包的目的IP地址是否与DNS响应消息中提供的任何IP地址相对应？
-10.这个网页包含图像。在检索每个图像之前，您的主机是否发出新的DNS查询？
+你应该得到类似下图所示的捕获结果：
 
-现在让*玩nslookup。
+![图3](image/图3.png)
 
-？启动数据包捕获。
-？在www.mit.edu做一个nslookup
-？停止数据包捕获。
-
-你应该得到一个如下所示的痕迹：
-
-
-我们从上面的屏幕截图看到，nslookup实际上发送了三个DNS查询，并收到了三个DNS响应。为了进行此任务，在回答以下问题时，请忽略前两组查询/响应，因为它们特定于nslookup，通常不会由标准Internet应用程序生成。您应该专注于最后一个查询和响应消息。
-
-4如果无法运行Wireshark并捕获跟踪文件，请使用zip文件中的跟踪文件dns-ethereal-trace-2 http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip
+我们从上面的屏幕截图看到，*nslookup*实际上发送了三个DNS查询，并收到了三个DNS响应。只考虑本次实验相关结果，在回答以下问题时，请忽略前两组查询/响应，因为*nslookup*的一些特殊性，这些查询通常不是由标准网络应用程序生成的。您应该专注于最后一个查询和响应消息。
 
 11. DNS查询消息的目标端口是什么？ DNS响应消息的源端口是什么？
-   12.发送DNS查询消息的IP地址？这是您的默认本地DNS服务器的IP地址吗？
-   13.检查DNS查询消息。什么※类型的DNS查询是？查询消息是否包含任何※答案？
-   14.检查DNS响应消息。提供了多少个答案？这些答案包含什么？
-   提供屏幕截图。
+12. DNS查询消息的目标IP地址是什么？这是你的默认本地DNS服务器的IP地址吗？
+13. 检查DNS查询消息。DNS查询是什么"Type"的？查询消息是否包含任何"answers"？
+14. 检查DNS响应消息。提供了多少个"answers"？这些答案包含什么？
+15. 提供屏幕截图。
 
-现在重复上一个实验，而是发出命令：
+现在重复上一个实验，但换成以下命令：
 
-nslookup -type = NS mit.edu
-
-回答下列问题：
-
-16.发送DNS查询消息的IP地址是什么？这是您的默认本地DNS服务器的IP地址吗？
-17.检查DNS查询消息。什么※类型的DNS查询是吗？查询消息是否包含任何※答案？
-18.检查DNS响应消息。响应消息提供的MIT名称服务器是什么？此响应消息还提供了MIT名称器的IP地址吗？
-提供屏幕截图。
-
-现在重复上一个实验，而是发出命令：
-
-nslookup www.aiit.or.kr bitsy.mit.edu
+`nslookup -type=NS mit.edu`
 
 回答下列问题：
 
-20.发送DNS查询消息的IP地址是什么？这是您的默认本地DNS服务器的IP地址吗？如果不是，IP地址是对应的？
-21.检查DNS查询消息。什么※类型的DNS查询是吗？查询消息是否包含任何※答案？
-22.检查DNS响应消息。提供了多少个答案？这些答案包含什么？
-提供截图。
+16. DNS查询消息发送到的IP地址是什么？这是您的默认本地DNS服务器的IP地址吗？
+17. 检查DNS查询消息。DNS查询是什么"Type"的？查询消息是否包含任何"answers"？
+18. 检查DNS响应消息。响应消息提供的MIT域名服务器是什么？此响应消息还提供了MIT域名服务器的IP地址吗？
+19. 提供屏幕截图。
 
-5如果无法运行Wireshark并捕获跟踪文件，请使用zip文件中的跟踪文件dns-ethereal-trace-3 http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip
-6如果无法运行Wireshark并捕获跟踪文件，请使用zip文件中的跟踪文件dns-ethereal-trace-4 http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip
+现在重复上一个实验，但换成以下命令：
 
+`nslookup www.aiit.or.kr bitsy.mit.edu`
 
+回答下列问题：
 
+20. DNS查询消息发送到的IP地址是什么？这是您的默认本地DNS服务器的IP地址吗？如果不是，这个IP地址是什么？
+21. 检查DNS查询消息。DNS查询是什么"Type"的？查询消息是否包含任何"answers"？
+22. 检查DNS响应消息。提供了多少个"answers"？这些答案包含什么？
+23. 提供屏幕截图。
