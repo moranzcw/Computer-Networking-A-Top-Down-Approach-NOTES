@@ -76,7 +76,8 @@ TODO...
 
 #### Wireshark实验：DNS (Page121)
 
-TODO...
+* 官方文档：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v6.01.pdf)
+* 翻译：[Wireshark实验-DNS.md](WiresharkLab/Wireshark实验-DNS/Wireshark实验-DNS.md)
 
 #### Wireshark实验：探究TCP (Page200)
 
