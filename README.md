@@ -36,7 +36,9 @@
 
 #### 作业5：ICMP ping (Page287)
 
-TODO...
+- 官方文档：[Socket5_ICMPpinger(chap4).pdf](SocketProgrammingAssignment/作业5-ICMPping程序/Socket5_ICMPpinger(chap4).pdf)
+- 翻译：[作业5-ICMPping程序-翻译.md](SocketProgrammingAssignment/作业5-ICMPping程序/作业5-ICMPping程序-翻译.md)
+- 解答：[作业5-ICMPping程序-解答.md](SocketProgrammingAssignment/作业5-ICMPping程序/作业5-ICMPping程序-解答.md)
 
 ***
 
