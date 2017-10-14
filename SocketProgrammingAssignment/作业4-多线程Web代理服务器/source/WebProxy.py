@@ -1,59 +1,70 @@
+#coding:utf-8
 from socket import *
-import sys
-import _thread
 
-name='localhost'
-port=2000
+# 创建socket，绑定到端口，开始监听
+tcpSerPort = 8899
+tcpSerSock = socket(AF_INET, SOCK_STREAM)
 
-def main():
-	try:
-		serverSocket=socket(AF_INET,SOCK_STREAM)
-		serverSocket.setsockopt(SOL_SOCKET,SO_REUSEADDR,1)
-		serverSocket.bind((name,port))
-		serverSocket.listen(50)
-	except (error,msg):
-		if serverSocket:
-			serverSocket.close()
-		print("socket error"),
-		print(msg)
-		sys.exit(1)
-	while 1:
-		connectionSocket,address=serverSocket.accept()
-		_thread.start_new_thread(webproxy,(connectionSocket,address))
-	serverSocket.close()
+# Prepare a server socket
+tcpSerSock.bind(('', tcpSerPort))
+tcpSerSock.listen(5)
 
-def webproxy(connectionSocket,address):
-	request=connectionSocket.recv(1024).decode()
-	start=request.find('/')
-	end=request.find('HTTP')
-	
-	servername=request[start+1:end]
-	request=request[:start+1]+" "+request[end:]	
-	start=request.find('Host')
-	start=request.find(":",start)
-	end=request.find("\n",start)
-	request=request[:start+1]+" "+servername.rstrip()+":"+"80"+request[end:]
-	print(request)
-	
+while True:
+    # 开始从客户端接收请求
+    print('Ready to serve...')
+    tcpCliSock, addr = tcpSerSock.accept()
+    print('Received a connection from: ', addr)
+    message = tcpCliSock.recv(4096).decode()
 
-	clientSocket=socket(AF_INET,SOCK_STREAM)
-	print(servername)
-	try:
-		clientSocket.connect((servername,80))
-		clientSocket.send(request)
+    # 从请求中解析出filename
+    filename = message.split()[1].partition("//")[2].replace('/', '_')
+    fileExist = "false"
+    try:
+        # 检查缓存中是否存在该文件
+        f = open(filename, "r")
+        outputdata = f.readlines()
+        fileExist = "true"
+        print('File Exists!')
 
-		response=clientSocket.recv(1024)
-		print(response)
-		connectionSocket.send(response)
-		clientSocket.close()
-		connectionSocket.close()
-	except (error,msg):
-		if clientSocket:
-			clientSocket.close()
-		if connectionSocket:
-			connectionSocket.close()
-		print(msg)
-		sys.exit(1)
+        # 缓存中存在该文件，把它向客户端发送
+        for i in range(0, len(outputdata)):
+            tcpCliSock.send(outputdata[i].encode())
+        print('Read from cache')
 
-if __name__== '__main__':
-	main()
+    # 缓存中不存在该文件，异常处理
+    except IOError:
+        print('File Exist: ', fileExist)
+        if fileExist == "false":
+            # 在代理服务器上创建一个tcp socket
+            print('Creating socket on proxyserver')
+            c = socket(AF_INET, SOCK_STREAM)
+
+            hostn = message.split()[1].partition("//")[2].partition("/")[0]
+            print('Host Name: ', hostn)
+            try:
+                # 连接到远程服务器80端口
+                c.connect((hostn, 80))
+                print('Socket connected to port 80 of the host')
+
+                c.sendall(message.encode())
+                # Read the response into buffer
+                buff = c.recv(4096)
+
+                tcpCliSock.sendall(buff)
+                # Create a new file in the cache for the requested file.
+                # Also send the response in the buffer to client socket
+                # and the corresponding file in the cache
+                tmpFile = open("./" + filename, "w")
+                tmpFile.writelines(buff.decode().replace('\r\n', '\n'))
+                tmpFile.close()
+
+            except:
+                print("Illegal request")
+
+        else:
+            # HTTP response message for file not found
+            # Do stuff here
+            print('File Not Found...Stupid Andy')
+    # Close the client and the server sockets
+    tcpCliSock.close()
+tcpSerSock.close()
