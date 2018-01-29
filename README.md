@@ -42,28 +42,6 @@
 
 ***
 
-## 编程作业
-
-### 第3章 - 运输层
-
-#### 编程作业：实现一个可靠运输协议 (Page200)
-
-TODO...
-
-### 第4章 - 网络层
-
-#### 编程作业 (Page287)
-
-TODO...
-
-### 第7章 - 多媒体网络
-
-#### 编程作业 (Page439)
-
-TODO...
-
-***
-
 ## Wireshark实验
 
 #### Wireshark实验：入门 (Page52)
@@ -81,29 +59,17 @@ TODO...
 * 官方文档：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v6.01.pdf)
 * 翻译：[Wireshark实验-DNS.md](WiresharkLab/Wireshark实验-DNS/Wireshark实验-DNS.md)
 
-#### Wireshark实验：探究TCP (Page200)
+#### Wireshark实验：探究TCP (Page200) (TODO)
 
-TODO...
+#### Wireshark实验：探究UDP (Page201) (TODO)
 
-#### Wireshark实验：探究UDP (Page201)
+#### Wireshark实验 (Page288) (TODO)
 
-TODO...
+#### Wireshark实验 (Page339) (TODO)
 
-#### Wireshark实验 (Page288)
+#### Wireshark实验 (Page385) (TODO)
 
-TODO...
-
-#### Wireshark实验 (Page339)
-
-TODO...
-
-#### Wireshark实验 (Page385)
-
-TODO...
-
-#### Wireshark实验 (Page496)
-
-TODO...
+#### Wireshark实验 (Page496) (TODO)
 
 ***
 
