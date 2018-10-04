@@ -46,24 +46,38 @@
 
 #### Wireshark实验：入门 (Page52)
 
-* 官方文档：[Wireshark_Intro_v6.0.pdf](WiresharkLab/Wireshark实验-Intro/Wireshark_Intro_v6.0.pdf)
+* 官方文档第六版：[Wireshark_Intro_v6.0.pdf](WiresharkLab/Wireshark实验-Intro/Wireshark_Intro_v6.0.pdf)
+* 官方文档第七版：[Wireshark_Intro_v7.0.pdf](WiresharkLab/Wireshark实验-Intro/Wireshark_Intro_v7.0.pdf)
 * 翻译：[Wireshark实验-Intro.md](WiresharkLab/Wireshark实验-Intro/Wireshark实验-Intro.md)
 * 解答：[计算机网络实验-入门.pdf](WiresharkLab/Wireshark实验-Intro/计算机网络实验-入门.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
 
+**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+
 #### Wireshark实验：HTTP (Page121)
 
-* 官方文档：[Wireshark_HTTP_v6.1.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v6.1.pdf)
+* 官方文档第六版：[Wireshark_HTTP_v6.1.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v6.1.pdf)
+* 官方文档第七版：[Wireshark_HTTP_v7.0.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v7.0.pdf)
 * 翻译：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-HTTP/Wireshark实验-HTTP.md)
-* 解答1：[计算机网络实验-HTTP1.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP1.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-* 解答2：[计算机网络实验-HTTP2.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP2.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+* 解答部分1：[计算机网络实验-HTTP1.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP1.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+* 解答部分2：[计算机网络实验-HTTP2.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP2.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+
+**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
 
 #### Wireshark实验：DNS (Page121)
 
-* 官方文档：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v6.01.pdf)
+* 官方文档第六版：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v6.01.pdf)
+* 官方文档第七版：[Wireshark_DNS_v7.0.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v7.0.pdf)
 * 翻译：[Wireshark实验-DNS.md](WiresharkLab/Wireshark实验-DNS/Wireshark实验-DNS.md)
 * 解答：[DNS-参考答案.md](WiresharkLab/Wireshark实验-DNS/DNS-参考答案.md)（贡献者：[Ying](https://github.com/IrisZhang) )
 
-#### Wireshark实验：探究TCP (Page200) (TODO)
+#### Wireshark实验：探究TCP (Page200) 
+
+* 官方文档第六版：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-TCP/Wireshark_TCP_v6.0.pdf)
+* 官方文档第七版：[Wireshark_TCP_v7.0.pdf](WiresharkLab/Wireshark实验-TCP/Wireshark_TCP_v7.0.pdf)
+* 翻译：[Wireshark_TCP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-TCP/Wireshark_TCP_v7.0_Simplified_Chinese.pdf) 贡献者：CHN-STUDENT 的老师
+* 解答：[计算机网络实验-TCP.pdf](WiresharkLab/Wireshark实验-TCP/计算机网络实验-TCP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+
+**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
 
 #### Wireshark实验：探究UDP (Page201) (TODO)
 
