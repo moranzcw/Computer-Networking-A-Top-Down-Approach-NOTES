@@ -48,11 +48,14 @@
 
 * 官方文档：[Wireshark_Intro_v6.0.pdf](WiresharkLab/Wireshark实验-Intro/Wireshark_Intro_v6.0.pdf)
 * 翻译：[Wireshark实验-Intro.md](WiresharkLab/Wireshark实验-Intro/Wireshark实验-Intro.md)
+* 解答：[计算机网络实验-入门.pdf](WiresharkLab/Wireshark实验-Intro/计算机网络实验-入门.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验：HTTP (Page121)
 
 * 官方文档：[Wireshark_HTTP_v6.1.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v6.1.pdf)
 * 翻译：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-HTTP/Wireshark实验-HTTP.md)
+* 解答1：[计算机网络实验-HTTP1.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP1.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+* 解答2：[计算机网络实验-HTTP2.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP2.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验：DNS (Page121)
 
