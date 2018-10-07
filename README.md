@@ -68,7 +68,8 @@
 * 官方文档第六版：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v6.01.pdf)
 * 官方文档第七版：[Wireshark_DNS_v7.0.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v7.0.pdf)
 * 翻译：[Wireshark实验-DNS.md](WiresharkLab/Wireshark实验-DNS/Wireshark实验-DNS.md)
-* 解答：[DNS-参考答案.md](WiresharkLab/Wireshark实验-DNS/DNS-参考答案.md)（贡献者：[Ying](https://github.com/IrisZhang) )
+* 解答1：[DNS-参考答案.md](WiresharkLab/Wireshark实验-DNS/DNS-参考答案.md)（贡献者：[Ying](https://github.com/IrisZhang) )
+* 解答2：[计算机网络实验-DNS.pdf](WiresharkLab/Wireshark实验-DNS/计算机网络实验-DNS.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验：探究TCP (Page200) 
 
