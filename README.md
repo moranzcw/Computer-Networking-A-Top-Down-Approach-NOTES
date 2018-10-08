@@ -68,7 +68,10 @@
 * 官方文档第六版：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v6.01.pdf)
 * 官方文档第七版：[Wireshark_DNS_v7.0.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v7.0.pdf)
 * 翻译：[Wireshark实验-DNS.md](WiresharkLab/Wireshark实验-DNS/Wireshark实验-DNS.md)
-* 解答：[DNS-参考答案.md](WiresharkLab/Wireshark实验-DNS/DNS-参考答案.md)（贡献者：[Ying](https://github.com/IrisZhang) )
+* 解答1：[DNS-参考答案.md](WiresharkLab/Wireshark实验-DNS/DNS-参考答案.md)（贡献者：[Ying](https://github.com/IrisZhang) )
+* 解答2：[计算机网络实验-DNS.pdf](WiresharkLab/Wireshark实验-DNS/计算机网络实验-DNS.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+
+**注：DNS实验中一个服务器已经不在使用，且我无法解释我其中出现实验现象，只有参考价值，欢迎批评指出。@CHN-STUDENT**
 
 #### Wireshark实验：探究TCP (Page200) 
 
@@ -79,7 +82,14 @@
 
 **注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
 
-#### Wireshark实验：探究UDP (Page201) (TODO)
+#### Wireshark实验：探究UDP (Page201) 
+
+* 官方文档第六版：[Wireshark_UDP_v6.1.pdf](WiresharkLab/Wireshark实验-UDP/Wireshark_UDP_v6.1.pdf)
+* 官方文档第七版：[Wireshark_UDP_v7.0.pdf](WiresharkLab/Wireshark实验-UDP/Wireshark_UDP_v7.0.pdf)
+* 翻译：[UDP(Simplied_Chinese).pdf](WiresharkLab/Wireshark实验-UDP/UDP(Simplied_Chinese).pdf) （贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-UDP.pdf](WiresharkLab/Wireshark实验-UDP/计算机网络实验-UDP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+  
+**注：由于UDP实验较简单，直接分析[官方的结果](WiresharkLab/wireshark-traces/http-ethereal-trace-5)，但是可能实验中用词不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
 
 #### Wireshark实验 (Page288) (TODO)
 
