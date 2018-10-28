@@ -100,6 +100,15 @@
 
 **注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
 
+#### Wireshark实验：探究以太网和ARP (Page335) 
+
+* 官方文档第六版：[Wireshark_Ethernet_ARP_v6.01.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v6.01.pdf)
+* 官方文档第七版：[Wireshark_Ethernet_ARP_v7.0.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v7.0.pdf)
+* 翻译：[Wireshark_IP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v7.0_simpified_chinese.pdf) （贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-以太网和ARP.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/计算机网络实验-以太网和ARP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+
+**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+
 #### Wireshark实验 (Page288) (TODO)
 
 #### Wireshark实验 (Page339) (TODO)
