@@ -44,79 +44,72 @@
 
 ## Wireshark实验
 
+**（注：括号内的ID为对应内容的译者/作者。）**
+
+**（[CHN-STUDENT](https://github.com/chn-student)注：实验结果仅对当次抓包结果有效，仅供参考，如有问题，欢迎讨论。）**
+
 #### Wireshark实验：入门 (Page52)
 
 * 官方文档第六版：[Wireshark_Intro_v6.0.pdf](WiresharkLab/Wireshark实验-Intro/Wireshark_Intro_v6.0.pdf)
 * 官方文档第七版：[Wireshark_Intro_v7.0.pdf](WiresharkLab/Wireshark实验-Intro/Wireshark_Intro_v7.0.pdf)
 * 翻译：[Wireshark实验-Intro.md](WiresharkLab/Wireshark实验-Intro/Wireshark实验-Intro.md)
-* 解答：[计算机网络实验-入门.pdf](WiresharkLab/Wireshark实验-Intro/计算机网络实验-入门.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-
-**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+* 解答：[计算机网络实验-入门.pdf](WiresharkLab/Wireshark实验-Intro/计算机网络实验-入门.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验：HTTP (Page121)
 
 * 官方文档第六版：[Wireshark_HTTP_v6.1.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v6.1.pdf)
 * 官方文档第七版：[Wireshark_HTTP_v7.0.pdf](WiresharkLab/Wireshark实验-HTTP/Wireshark_HTTP_v7.0.pdf)
 * 翻译：[Wireshark实验-HTTP.md](WiresharkLab/Wireshark实验-HTTP/Wireshark实验-HTTP.md)
-* 解答部分1：[计算机网络实验-HTTP1.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP1.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-* 解答部分2：[计算机网络实验-HTTP2.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP2.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-
-**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+* 解答部分1：[计算机网络实验-HTTP1.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP1.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
+* 解答部分2：[计算机网络实验-HTTP2.pdf](WiresharkLab/Wireshark实验-HTTP/计算机网络实验-HTTP2.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验：DNS (Page121)
 
 * 官方文档第六版：[Wireshark_DNS_v6.01.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v6.01.pdf)
 * 官方文档第七版：[Wireshark_DNS_v7.0.pdf](WiresharkLab/Wireshark实验-DNS/Wireshark_DNS_v7.0.pdf)
 * 翻译：[Wireshark实验-DNS.md](WiresharkLab/Wireshark实验-DNS/Wireshark实验-DNS.md)
-* 解答1：[DNS-参考答案.md](WiresharkLab/Wireshark实验-DNS/DNS-参考答案.md)（贡献者：[Ying](https://github.com/IrisZhang) )
-* 解答2：[计算机网络实验-DNS.pdf](WiresharkLab/Wireshark实验-DNS/计算机网络实验-DNS.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+* 解答1：[DNS-参考答案.md](WiresharkLab/Wireshark实验-DNS/DNS-参考答案.md)（ [Ying](https://github.com/IrisZhang) )
+* 解答2：[计算机网络实验-DNS.pdf](WiresharkLab/Wireshark实验-DNS/计算机网络实验-DNS.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
-**注：DNS实验中一个服务器已经不在使用，且我无法解释我其中出现实验现象，只有参考价值，欢迎批评指出。@CHN-STUDENT**
+**（[CHN-STUDENT](https://github.com/chn-student)注：DNS实验中一个服务器已经不在使用，且部分现象无法解释，仅供参考。）**
 
 #### Wireshark实验：探究TCP (Page200) 
 
 * 官方文档第六版：[Wireshark_TCP_v6.01.pdf](WiresharkLab/Wireshark实验-TCP/Wireshark_TCP_v6.0.pdf)
 * 官方文档第七版：[Wireshark_TCP_v7.0.pdf](WiresharkLab/Wireshark实验-TCP/Wireshark_TCP_v7.0.pdf)
 * 翻译：[Wireshark_TCP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-TCP/Wireshark_TCP_v7.0_Simplified_Chinese.pdf) 贡献者：CHN-STUDENT 的老师
-* 解答：[计算机网络实验-TCP.pdf](WiresharkLab/Wireshark实验-TCP/计算机网络实验-TCP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-
-**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+* 解答：[计算机网络实验-TCP.pdf](WiresharkLab/Wireshark实验-TCP/计算机网络实验-TCP.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验：探究UDP (Page201) 
 
 * 官方文档第六版：[Wireshark_UDP_v6.1.pdf](WiresharkLab/Wireshark实验-UDP/Wireshark_UDP_v6.1.pdf)
 * 官方文档第七版：[Wireshark_UDP_v7.0.pdf](WiresharkLab/Wireshark实验-UDP/Wireshark_UDP_v7.0.pdf)
-* 翻译：[UDP(Simplied_Chinese).pdf](WiresharkLab/Wireshark实验-UDP/UDP(Simplied_Chinese).pdf) （贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-* 解答：[计算机网络实验-UDP.pdf](WiresharkLab/Wireshark实验-UDP/计算机网络实验-UDP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
+* 翻译：[UDP(Simplied_Chinese).pdf](WiresharkLab/Wireshark实验-UDP/UDP(Simplied_Chinese).pdf) （ [CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-UDP.pdf](WiresharkLab/Wireshark实验-UDP/计算机网络实验-UDP.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
   
-**注：由于UDP实验较简单，直接分析[官方的结果](WiresharkLab/wireshark-traces/http-ethereal-trace-5)，但是可能实验中用词不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+
+**（[CHN-STUDENT](https://github.com/chn-student)注：由于UDP实验较简单，直接分析[官方的结果](WiresharkLab/wireshark-traces/http-ethereal-trace-5)，实验结果仅供参考价值。）**
 
 #### Wireshark实验：探究IP (Page240) 
 
 * 官方文档第六版：[Wireshark_IP_v6.0.pdf](WiresharkLab/Wireshark实验-IP/Wireshark_IP_v6.0.pdf)
 * 官方文档第七版：[Wireshark_IP_v7.0.pdf](WiresharkLab/Wireshark实验-IP/Wireshark_IP_v7.0.pdf)
 * 翻译：[Wireshark_IP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-IP/Wireshark_IP_v7.0_Simplied_Chinese.pdf) 贡献者：CHN-STUDENT 的老师
-* 解答：[计算机网络实验-IP.pdf](WiresharkLab/Wireshark实验-IP/计算机网络实验-IP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-
-**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+* 解答：[计算机网络实验-IP.pdf](WiresharkLab/Wireshark实验-IP/计算机网络实验-IP.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
 
 #### Wireshark实验：探究ICMP，Ping和Traceroute (Page282) 
 * 官方文档第六版：[Wireshark_ICMP_v6.0.pdf](WiresharkLab/Wireshark实验-ICMP/Wireshark_ICMP_v6.0.pdf)
 * 官方文档第七版：[Wireshark_ICMP_v7.0.pdf](WiresharkLab/Wireshark实验-ICMP/Wireshark_ICMP_v7.0.pdf)
-* 翻译：[Wireshark_ICMP_v7.0_simpified_chinese.pdf](WiresharkLab/Wireshark实验-ICMP/Wireshark_ICMP_v7.0_simpified_chinese.pdf) （贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-* 解答：[计算机网络实验-ICMP.pdf](WiresharkLab/Wireshark实验-ICMP/计算机网络实验-ICMP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-
-**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+* 翻译：[Wireshark_ICMP_v7.0_simpified_chinese.pdf](WiresharkLab/Wireshark实验-ICMP/Wireshark_ICMP_v7.0_simpified_chinese.pdf) （ [CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-ICMP.pdf](WiresharkLab/Wireshark实验-ICMP/计算机网络实验-ICMP.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验：探究以太网和ARP (Page335) 
 
 * 官方文档第六版：[Wireshark_Ethernet_ARP_v6.01.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v6.01.pdf)
 * 官方文档第七版：[Wireshark_Ethernet_ARP_v7.0.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v7.0.pdf)
-* 翻译：[Wireshark_ARP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v7.0_simpified_chinese.pdf) （贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-* 解答：[计算机网络实验-以太网和ARP.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/计算机网络实验-以太网和ARP.pdf)（贡献者：[CHN-STUDENT](https://github.com/chn-student) )
-
-**注：以上实验结果仅对当次抓包结果有效，且不一定准确，只有参考价值，欢迎批评指出不足。@CHN-STUDENT**
+* 翻译：[Wireshark_ARP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v7.0_simpified_chinese.pdf) （[CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-以太网和ARP.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/计算机网络实验-以太网和ARP.pdf)（[CHN-STUDENT](https://github.com/chn-student) )
 
 #### Wireshark实验 (Page339) (TODO)
 
