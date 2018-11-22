@@ -111,6 +111,15 @@
 * 翻译：[Wireshark_ARP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/Wireshark_Ethernet_ARP_v7.0_simpified_chinese.pdf) （[CHN-STUDENT](https://github.com/chn-student) )
 * 解答：[计算机网络实验-以太网和ARP.pdf](WiresharkLab/Wireshark实验-Ethernet-ARP/计算机网络实验-以太网和ARP.pdf)（[CHN-STUDENT](https://github.com/chn-student) )
 
+
+#### Wireshark实验：探究DHCP (Page240) 
+
+* 官方文档第六版：[Wireshark_DHCP_v6.0.pdf](WiresharkLab/Wireshark实验-DHCP/Wireshark_DHCP_v6.0.pdf)
+* 官方文档第七版：[Wireshark_DHCP_v7.0.pdf](WiresharkLab/Wireshark实验-DHCP/Wireshark_DHCP_v7.0.pdf)
+* 翻译：[Wireshark_DHCP_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-DHCP/Wireshark_DHCP_v7.0_Simplied_Chinese.pdf) （[CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-DHCP.pdf](WiresharkLab/Wireshark实验-DHCP/计算机网络实验-DHCP.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
+
+
 #### Wireshark实验 (Page339) (TODO)
 
 #### Wireshark实验 (Page385) (TODO)
