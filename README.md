@@ -120,11 +120,18 @@
 * 解答：[计算机网络实验-DHCP.pdf](WiresharkLab/Wireshark实验-DHCP/计算机网络实验-DHCP.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
 
-#### Wireshark实验 (Page339) (TODO)
+#### Wireshark实验：探究NAT (Page240) 
 
-#### Wireshark实验 (Page385) (TODO)
+* 官方文档第六版：[Wireshark_NAT_v6.0.pdf](WiresharkLab/Wireshark实验-NAT/Wireshark_NAT_v6.0.pdf)
+* 官方文档第七版：[Wireshark_NAT_v7.0.pdf](WiresharkLab/Wireshark实验-NAT/Wireshark_NAT_v7.0.pdf)
+* 翻译：[Wireshark_NAT_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-NAT/Wireshark_NAT_v7.0_Simplied_Chinese.pdf) （[CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-NAT.pdf](WiresharkLab/Wireshark实验-NAT/计算机网络实验-NAT.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
-#### Wireshark实验 (Page496) (TODO)
+
+
+#### Wireshark实验 (Page383) (TODO)
+
+#### Wireshark实验 (Page437) (TODO)
 
 ***
 
