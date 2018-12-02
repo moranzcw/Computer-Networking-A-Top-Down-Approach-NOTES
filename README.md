@@ -136,7 +136,7 @@
 * 官方文档第六版：[Wireshark_SSL_v6.0.pdf](WiresharkLab/Wireshark实验-SSL/Wireshark_SSL_v6.0.pdf)
 * 官方文档第七版：[Wireshark_SSL_v7.0.pdf](WiresharkLab/Wireshark实验-SSL/Wireshark_SSL_v7.0.pdf)
 * 翻译：[Wireshark_SSL_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-SSL/Wireshark_SSL_v7.0_Simplified_Chinese.pdf) （[CHN-STUDENT](https://github.com/chn-student) )
-* 解答：[计算机网络实验-NAT.pdf](WiresharkLab/Wireshark实验-SSL/计算机网络实验-SSL.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-SSL.pdf](WiresharkLab/Wireshark实验-SSL/计算机网络实验-SSL.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
 
 ***
 
