@@ -129,7 +129,14 @@
 
 
 
-#### Wireshark实验 (Page383) (TODO)
+#### Wireshark实验：探究802.11 (Page383)
+ 
+* 官方文档第六版：[Wireshark_802.11_v6.0.pdf](WiresharkLab/Wireshark实验-802.11/Wireshark_802.11_v6.0.pdf)
+* 官方文档第七版：[Wireshark_802.11_v7.0.pdf](WiresharkLab/Wireshark实验-802.11/Wireshark_802.11_v7.0.pdf)
+* 翻译：[Wireshark_802.11_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-802.11/Wireshark_802.11_v7.0_Simplified_Chinese.pdf) （[CHN-STUDENT](https://github.com/chn-student) )
+* 解答：[计算机网络实验-802.11.pdf](WiresharkLab/Wireshark实验-802.11/计算机网络实验-802.11.pdf)（ [CHN-STUDENT](https://github.com/chn-student) )
+
+**（[CHN-STUDENT](https://github.com/chn-student)注：由于不具备研究802.11无线协议的条件，直接分析[官方的结果](WiresharkLab/wireshark-traces/Wireshark_802_11.pcap)，实验结果仅供参考价值。）**
 
 #### Wireshark实验：探究SSL (Page437) 
 
