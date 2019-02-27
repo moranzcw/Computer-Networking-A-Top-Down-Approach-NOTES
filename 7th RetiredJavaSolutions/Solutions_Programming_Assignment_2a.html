@@ -1,0 +1,107 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Solutions for Mail User Agent</title>
+</head>
+
+<body>
+
+<h2><font face="Arial" color="#800000">Solutions for Mail User Agent: Simplified 
+Version</font></h2>
+<pre>&nbsp;</pre>
+<pre>import java.io.*;
+import java.net.*;
+
+public class EmailSender
+{
+   public static void main(String[] args) throws Exception
+   {
+      // Establish a TCP connection with the mail server.
+      Socket socket = new Socket(&quot;mx1.csusb.edu&quot;, 25);
+
+      // Create a BufferedReader to read a line at a time.
+      InputStream is = socket.getInputStream();
+      InputStreamReader isr = new InputStreamReader(is);
+      BufferedReader br = new BufferedReader(isr);
+
+      // Read greeting from the server.
+      String response = br.readLine();
+      System.out.println(response);
+      if (!response.startsWith(&quot;220&quot;)) {
+         throw new Exception(&quot;220 reply not received from server.&quot;);
+      }
+
+      // Get a reference to the socket's output stream.
+      OutputStream os = socket.getOutputStream();
+
+      // Send HELO command and get server response.
+      String command = &quot;HELO x\r\n&quot;;
+      System.out.print(command);
+      os.write(command.getBytes(&quot;US-ASCII&quot;));
+      response = br.readLine();
+      System.out.println(response);
+      if (!response.startsWith(&quot;250&quot;)) {
+         throw new Exception(&quot;250 reply not received from server.&quot;);
+      }
+
+      // Send MAIL FROM command.
+      command = &quot;MAIL FROM: x@aiit.or.kr\r\n&quot;;
+      System.out.print(command);
+      os.write(command.getBytes(&quot;US-ASCII&quot;));
+      response = br.readLine();
+      System.out.println(response);
+      if (!response.startsWith(&quot;250&quot;)) {
+         throw new Exception(&quot;250 reply not received from server.&quot;);
+      }
+
+      // Send RCPT TO command.
+      command = &quot;RCPT TO: dturner@csusb.edu\r\n&quot;;
+      System.out.print(command);
+      os.write(command.getBytes(&quot;US-ASCII&quot;));
+      response = br.readLine();
+      System.out.println(response);
+      if (!response.startsWith(&quot;250&quot;)) {
+         throw new Exception(&quot;250 reply not received from server.&quot;);
+      }
+
+      // Send DATA command.
+      command = &quot;DATA\r\n&quot;;
+      System.out.print(command);
+      os.write(command.getBytes(&quot;US-ASCII&quot;));
+      response = br.readLine();
+      System.out.println(response);
+      if (!response.startsWith(&quot;354&quot;)) {
+         throw new Exception(&quot;354 reply not received from server.&quot;);
+      }
+
+      // Send message data.
+      os.write(&quot;SUBJECT: test msg\r\n\r\n&quot;.getBytes(&quot;US-ASCII&quot;));
+      os.write(&quot;David,\r\n&quot;.getBytes(&quot;US-ASCII&quot;));
+      os.write(&quot;\r\n&quot;.getBytes(&quot;US-ASCII&quot;));
+      os.write(&quot;This lab is too hard.\r\n&quot;.getBytes(&quot;US-ASCII&quot;));
+
+      // End with line with a single period.
+      os.write(&quot;.\r\n&quot;.getBytes(&quot;US-ASCII&quot;));
+      response = br.readLine();
+      System.out.println(response);
+      if (!response.startsWith(&quot;250&quot;)) {
+         throw new Exception(&quot;250 reply not received from server.&quot;);
+      }
+
+      // Send QUIT command.
+      command = &quot;QUIT\r\n&quot;;
+      System.out.print(command);
+      os.write(command.getBytes(&quot;US-ASCII&quot;));
+      response = br.readLine();
+      System.out.println(response);
+   }
+}
+</pre>
+
+</body>
+
+</html>

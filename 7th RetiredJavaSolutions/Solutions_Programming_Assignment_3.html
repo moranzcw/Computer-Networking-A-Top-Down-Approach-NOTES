@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0116)file://C:\Documents%20and%20Settings\Student\Local%20Settings\Temporary%20Internet%20Files\OLKF\Solution-udplab.html -->
+<HTML><HEAD><TITLE>Solution for the UDP Lab</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY>
+<H2>Solution for the UDP Lab</H2>
+<P>The following code presents one solution for the UDP lab. It contains code 
+for the UDPClient.java and UDPPinger.java classes. The other classes do not 
+require modifications in the basic lab. 
+<H2>UDPClient.java</H2><PRE>/**
+ * UDPClient.java -- Simple UDP client
+ *
+ * $Id: UDPClient.java,v 1.2 2003/10/14 14:25:30 kangasha Exp $
+ *
+ */
+
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+public class UDPClient extends UDPPinger implements Runnable {
+    /** Host to ping */
+    String remoteHost;
+    /** Port number of remote host */
+    int remotePort;
+
+    /** How many pings to send */
+    static final int NUM_PINGS = 10;
+    /** How many reply pings have we received */
+    int numReplies = 0;
+    /** Array for holding replies and RTTs */
+    static boolean[] replies = new boolean[NUM_PINGS];
+    static long[] rtt = new long[NUM_PINGS];
+
+    /* Send our own pings at least once per second. If no replies received
+       within 5 seconds, assume ping was lost. */
+    /** 1 second timeout for waiting replies */
+    static final int TIMEOUT = 1000;
+    /** 5 second timeout for collecting pings at the end */
+    static final int REPLY_TIMEOUT = 5000;
+
+    /** Create UDPClient object. */
+    public UDPClient(String host, int port) {
+	remoteHost = host;
+	remotePort = port;
+    }
+
+    /** Main code for pinger client thread. */
+    public void run() {
+	/* Create socket. We do not care which local port we use. */
+	createSocket();
+	try {
+	    socket.setSoTimeout(TIMEOUT);
+	} catch (SocketException e) {
+	    System.out.println("Error setting timeout TIMEOUT: " + e);
+	}
+
+	for (int i = 0; i &lt; NUM_PINGS; i++) {
+	    /* Message we want to send. Add space at the end for easy
+	       parsing of replies. */
+	    Date now = new Date();
+	    String message = "PING " + i + " " + now.getTime() + " ";
+	    replies[i] = false;
+	    rtt[i] = 1000000;
+	    PingMessage ping = null;
+
+	    /* Send ping to recipient */
+	    try {
+		ping = new PingMessage(InetAddress.getByName(remoteHost), 
+				       remotePort, message);
+	    } catch (UnknownHostException e) {
+		System.out.println("Cannot find host: " + e);
+	    }
+	    sendPing(ping);
+	    
+	    /* Read reply */
+	    try {
+		PingMessage reply = receivePing();
+		handleReply(reply.getContents());
+	    } catch (SocketTimeoutException e) {
+		/* Reply did not arrive. Do nothing for now. Figure
+		 * out lost pings later. */
+	    }
+	}
+	/* We sent all our pings. Now check if there are still missing
+	   replies. Wait for a reply, if nothing comes, then assume it
+	   was lost. If a reply arrives, keep looking until nothing comes
+	   within a reasonable timeout. */
+	try {
+	    socket.setSoTimeout(REPLY_TIMEOUT);
+	} catch (SocketException e) {
+	    System.out.println("Error setting timeout REPLY_TIMEOUT: " + e);
+	}
+	while (numReplies &lt; NUM_PINGS) {
+	    try {
+		PingMessage reply = receivePing();
+		handleReply(reply.getContents());
+	    } catch (SocketTimeoutException e) {
+		/* Nothing coming our way apparently. Exit loop. */
+		numReplies = NUM_PINGS;
+	    }
+	}
+	/* Print statistics */
+	for (int i = 0; i &lt; NUM_PINGS; i++) {
+	    System.out.println("PING " + i + ": " + replies[i] + 
+			       " RTT: " + rtt[i]);
+	}
+
+    }
+
+    /** Handle the incoming ping message. For now, just count it as
+     * having been correctly received. */
+    private void handleReply(String reply) {
+	String[] tmp = reply.split(" ");
+	int pingNumber = Integer.parseInt(tmp[1]);
+	long then = Long.parseLong(tmp[2]);
+	replies[pingNumber] = true;
+	/* Calculate RTT and store it in the rtt-array. */
+	Date now = new Date();
+	rtt[pingNumber] = now.getTime() - then;
+	numReplies++;
+    }
+
+    /** Main function. Read command line arguments and start the
+     * client thread. */
+    public static void main(String args[]) {
+	String host = null;
+	int port = 0;
+
+	/* Parse host and port number from commandline */
+	try {
+	    host = args[0];
+	    port = Integer.parseInt(args[1]);
+	} catch (ArrayIndexOutOfBoundsException e) {
+	    System.out.println("Need two arguments: remoteHost remotePort");
+	    System.exit(-1);
+	} catch (NumberFormatException e) {
+	    System.out.println("Please give port number as integer.");
+	    System.exit(-1);
+	}
+	System.out.println("Contacting host " + host + " at port " + port);
+	
+	UDPClient Client = new UDPClient(host, port);
+	Client.run();
+    }
+}
+</PRE>
+<H2>UDPPinger.java</H2><PRE>/**
+ * UDPPinger.java -- Basic routines for UDP pinger
+ *
+ * $Id: UDPPinger.java,v 1.1.1.1 2003/09/30 14:36:11 kangasha Exp $
+ *
+ */
+
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+public class UDPPinger {
+    /** Socket which we use. */
+    DatagramSocket socket;
+
+    /** Maximum length of a PING message. */
+    static final int MAX_PING_LEN = 1024;
+
+    /** Create a socket for sending UDP messages */
+    public void createSocket() {
+	try {
+	    socket = new DatagramSocket();
+	} catch (SocketException e) {
+	    System.out.println("Error creating socket: " + e);
+	}
+    }
+
+    /** Create a socket for receiving UDP messages. This socket must be
+     * bound to the given port. */
+    public void createSocket(int port) {
+	try {
+	    socket = new DatagramSocket(port);
+	} catch (SocketException e) {
+	    System.out.println("Error creating socket: " + e);
+	}
+    }
+
+    /** Send a UDP ping message which is given as the argument. */
+    public void sendPing(PingMessage ping) {
+	InetAddress host = ping.getHost();
+	int port = ping.getPort();
+	String message = ping.getContents();
+
+	try {
+	    /* Create a datagram packet addressed to the recipient */
+	    DatagramPacket packet = 
+		new DatagramPacket(message.getBytes(), message.length(),
+				   host, port);
+	    
+	    /* Send the packet */
+	    socket.send(packet);
+	    System.out.println("Sent message to " + host + ":" + port);
+	} catch (IOException e) {
+	    System.out.println("Error sending packet: " + e);
+	}
+    }
+
+    /** Receive a UDP ping message and return the received message. We
+       throw an exception to indicate that the socket timed out. This
+       can happen when a message was lost in the network. */
+    public PingMessage receivePing() throws SocketTimeoutException {
+	/* Create packet for receiving the reply */
+	byte recvBuf[] = new byte[MAX_PING_LEN];
+	DatagramPacket recvPacket = 
+	    new DatagramPacket(recvBuf, MAX_PING_LEN);
+	PingMessage reply = null;
+	
+	/* Read message from socket. */
+	try {
+	    socket.receive(recvPacket);
+	    
+	    System.out.println("Received message from " + 
+			       recvPacket.getAddress() +
+			       ":" + recvPacket.getPort());
+	    String recvMsg = new String(recvPacket.getData());
+	    reply = new PingMessage(recvPacket.getAddress(),
+				    recvPacket.getPort(),
+				    recvMsg);
+	    
+	} catch (SocketTimeoutException e) {
+	    /* Note: Because the socket has a timeout, we may get a
+	     * SocketTimeoutException. The calling function needs to
+	     * know of this timeout to know when to quit. However,
+	     * SocketTimeoutException is a subclass of IOException
+	     * which signals read errors on the socket, so we need to
+	     * catch SocketTimeoutException here and throw it
+	     * forward. */
+	    throw e;
+	} catch (IOException e) {
+	    System.out.println("Error reading from socket: " + e);
+	}
+	return reply;
+    }
+}
+</PRE></BODY></HTML>

@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Solution for the Proxy Cache Lab</title>
+  </head>
+
+  
+<body>
+<h2>Solution for the Proxy Cache Lab</h2>
+<p>The following is one solution for the proxy cache lab. It contains
+code for all the three classes in the lab.
+
+
+<h2>ProxyCache.java</h2>
+
+
+<pre>
+/**
+ * ProxyCache.java - Simple caching proxy
+ *
+ * $Id: ProxyCache.java,v 1.3 2004/02/16 15:22:00 kangasha Exp $
+ *
+ */
+
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+public class ProxyCache {
+    /** Port for the proxy */
+    private static int port;
+    /** Socket for client connections */
+    private static ServerSocket socket;
+
+    /** Create the ProxyCache object and the socket */
+    public static void init(int p) {
+	port = p;
+	try {
+	    socket = new ServerSocket(port);
+	} catch (IOException e) {
+	    System.out.println("Error creating socket: " + e);
+	    System.exit(-1);
+	}
+    }
+
+    public static void handle(Socket client) {
+	Socket server = null;
+	HttpRequest request = null;
+	HttpResponse response = null;
+
+	/* Process request. If there are any exceptions, then simply
+	 * return and end this thread. This unfortunately means the
+	 * client will hang for a while, until it timeouts. */
+
+	/* Read request */
+	try {
+	    BufferedReader fromClient = 
+		new BufferedReader(new InputStreamReader(client.getInputStream()));
+	    System.out.println("Reading request...");
+
+	    request = new HttpRequest(fromClient);
+	    System.out.println("Got request...");
+	} catch (IOException e) {
+	    System.out.println("Error reading request from client: " + e);
+	    return;
+	}
+	/* Send request to server */
+	try {
+	    /* Open socket and write request to socket */
+	    server = new Socket(request.getHost(), request.getPort());
+	    DataOutputStream toServer = 
+		new DataOutputStream(server.getOutputStream());
+	    toServer.writeBytes(request.toString());
+	} catch (UnknownHostException e) {
+	    System.out.println("Unknown host: " + request.getHost());
+	    System.out.println(e);
+	    return;
+	} catch (IOException e) {
+	    System.out.println("Error writing request to server: " + e);
+	    return;
+	}
+	/* Read response and forward it to client */
+	try {
+	    DataInputStream fromServer = 
+		new DataInputStream(server.getInputStream());
+	    //InputStream is = server.getInputStream();
+
+	    response = new HttpResponse(fromServer);
+	    //response = new HttpResponse(is);
+	    DataOutputStream toClient =
+	        new DataOutputStream(client.getOutputStream());
+	    toClient.writeBytes(response.toString());
+	    toClient.write(response.body);
+	    client.close();
+	    server.close();
+	    /* Insert object into the cache */
+	    /* Fill in (optional exercise only) */
+	} catch (IOException e) {
+	    System.out.println("Error writing response to client: " + e);
+	}
+    }
+
+
+    /** Read command line arguments and start proxy */
+    public static void main(String args[]) {
+	int myPort = 0;
+	
+	try {
+	    myPort = Integer.parseInt(args[0]);
+	} catch (ArrayIndexOutOfBoundsException e) {
+	    System.out.println("Need port number as argument");
+	    System.exit(-1);
+	} catch (NumberFormatException e) {
+	    System.out.println("Please give port number as integer.");
+	    System.exit(-1);
+	}
+	
+	init(myPort);
+
+	/** Main loop. Listen for incoming connections and spawn a new
+	 * thread for handling them */
+	Socket client = null;
+	
+	while (true) {
+	    try {
+		client = socket.accept();
+		System.out.println("Got connection " + client);
+		handle(client);
+		//ProxyCacheThread request = new ProxyCacheThread(client);
+		//request.run();
+	    } catch (IOException e) {
+		System.out.println("Error reading request from client: " + e);
+		/* Definitely cannot continue, so skip to next
+		 * iteration of while loop. */
+		continue;
+	    }
+	}
+
+    }
+}
+</pre>
+
+<h2>HttpRequest.java</h2>
+<pre>
+/**
+ * HttpRequest - HTTP request container and parser
+ *
+ * $Id: HttpRequest.java,v 1.3 2004/02/16 15:21:14 kangasha Exp $
+ *
+ */
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+public class HttpRequest {
+    /** Help variables */
+    final static String CRLF = "\r\n";
+    final static int HTTP_PORT = 80;
+    /** Store the request parameters */
+    String method;
+    String URI;
+    String version;
+    String headers = "";
+    /** Server and port */
+    private String host;
+    private int port;
+
+    /** Create HttpRequest by reading it from the client socket */
+    public HttpRequest(BufferedReader from) {
+	String firstLine = "";
+	try {
+	    firstLine = from.readLine();
+	} catch (IOException e) {
+	    System.out.println("Error reading request line: " + e);
+	}
+
+	String[] tmp = firstLine.split(" ");
+	method = tmp[0];
+	URI = tmp[1];
+	version = tmp[2];
+
+	System.out.println("URI is: " + URI);
+
+	if (!method.equals("GET")) {
+	    System.out.println("Error: Method not GET");
+	}
+	try {
+	    String line = from.readLine();
+	    while (line.length() != 0) {
+		headers += line + CRLF;
+		/* We need to find host header to know which server to
+		 * contact in case the request URI is not complete. */
+		if (line.startsWith("Host:")) {
+		    tmp = line.split(" ");
+		    if (tmp[1].indexOf(':') > 0) {
+			String[] tmp2 = tmp[1].split(":");
+			host = tmp2[0];
+			port = Integer.parseInt(tmp2[1]);
+		    } else {
+			host = tmp[1];
+			port = HTTP_PORT;
+		    }
+		}
+		line = from.readLine();
+	    }
+	} catch (IOException e) {
+	    System.out.println("Error reading from socket: " + e);
+	    return;
+	}
+	System.out.println("Host to contact is: " + host + " at port " + port);
+    }
+
+    /** Return host for which this request is intended */
+    public String getHost() {
+	return host;
+    }
+
+    /** Return port for server */
+    public int getPort() {
+	return port;
+    }
+
+    /**
+     * Convert request into a string for easy re-sending.
+     */
+    public String toString() {
+	String req = "";
+
+	req = method + " " + URI + " " + version + CRLF;
+	req += headers;
+	/* This proxy does not support persistent connections */
+	req += "Connection: close" + CRLF;
+	req += CRLF;
+	
+	return req;
+    }
+}
+</pre>
+
+<h2>HttpResponse.java</h3>
+<pre>
+/**
+ * HttpResponse - Handle HTTP replies
+ *
+ * $Id: HttpResponse.java,v 1.3 2004/02/16 15:21:46 kangasha Exp $
+ *
+ */
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+public class HttpResponse {
+    final static String CRLF = "\r\n";
+    /** How big is the buffer used for reading the object */
+    final static int BUF_SIZE = 8192;
+    /** Maximum size of objects that this proxy can handle. For the
+     * moment set to 100 KB */
+    final static int MAX_OBJECT_SIZE = 100000;
+    /** Reply status and headers */
+    String version;
+    int status;
+    String statusLine = "";
+    String headers = "";
+    /* Body of reply */
+    byte[] body = new byte[MAX_OBJECT_SIZE];
+
+    /** Read response from server. */
+    public HttpResponse(DataInputStream fromServer) {
+    //public HttpResponse(InputStream is) {
+    	/* Length of the object */
+	int length = -1;
+	boolean gotStatusLine = false;
+
+	// Test code
+	//BufferedReader fromServer = 
+	//    new BufferedReader(new InputStreamReader(is));
+
+	/* First read status line and response headers */
+	try {
+	    String line = fromServer.readLine();
+	    while (line.length() != 0) {
+		if (!gotStatusLine) {
+		    statusLine = line;
+		    gotStatusLine = true;
+		} else {
+		    headers += line + CRLF;
+		}
+
+		/* Note length of content as indicated by
+		 * Content-Length header. Unfortunately this is not
+		 * present in every response. */
+		if (line.startsWith("Content-Length:") ||
+		    line.startsWith("Content-length:")) {
+		    String[] tmp = line.split(" ");
+		    length = Integer.parseInt(tmp[1]);
+		}
+		line = fromServer.readLine();
+	    }
+	} catch (IOException e) {
+	    System.out.println("Error reading headers from server: " + e);
+	    return;
+	}
+
+	try {
+	    int bytesRead = 0;
+	    byte buf[] = new byte[BUF_SIZE];
+	    boolean loop = false;
+
+	    /* If we didn't get Content-Length header, just loop until
+	     * the connection is closed. */
+	    if (length == -1) {
+		loop = true;
+	    }
+	    
+	    /* Read the body in chunks of BUF_SIZE and copy the chunk
+	     * into body. Usually replies come back in smaller chunks
+	     * than BUF_SIZE. The while-loop ends when either we have
+	     * read Content-Length bytes or when the connection is
+	     * closed (when there is no Connection-Length in the
+	     * response. */
+	    while (bytesRead < length || loop) {
+		/* Read it in as binary data */
+		int res = fromServer.read(buf, 0, BUF_SIZE);
+		//int res = is.read(buf, 0, BUF_SIZE);
+		if (res == -1) {
+		    break;
+		}
+		/* Copy the bytes into body. Make sure we don't exceed
+		 * the maximum object size. */
+		for (int i = 0; 
+		     i < res && (i + bytesRead) < MAX_OBJECT_SIZE; 
+		     i++) {
+		    body[bytesRead + i] = buf[i];
+		}
+		bytesRead += res;
+	    }
+ 	} catch (IOException e) {
+ 	    System.out.println("Error reading response body: " + e);
+ 	    return;
+ 	}
+
+
+    }
+
+    /**
+     * Convert response into a string for easy re-sending. Only
+     * converts the response headers, body is not converted to a
+     * string.
+     */
+    public String toString() {
+	String res = "";
+
+	res = statusLine + CRLF;
+	res += headers;
+	res += CRLF;
+	
+	return res;
+    }
+}
+</h3>
+
+
+  </body>
+</html>
