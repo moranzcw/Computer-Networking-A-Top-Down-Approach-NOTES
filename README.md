@@ -1,6 +1,6 @@
-# 《计算机网络－自顶向下方法(原书第6版)》笔记
+# 《计算机网络－自顶向下方法》笔记
 
-《计算机网络－自顶向下方法(原书第6版)》编程作业的解答和代码，Wireshark实验的官方文档的翻译。
+《计算机网络－自顶向下方法》编程作业的解答和代码，Wireshark实验的官方文档的翻译。
 
 ***
 
@@ -130,7 +130,7 @@
 
 
 #### Wireshark实验：探究802.11 (Page383)
- 
+
 * 官方文档第六版：[Wireshark_802.11_v6.0.pdf](WiresharkLab/Wireshark实验-802.11/Wireshark_802.11_v6.0.pdf)
 * 官方文档第七版：[Wireshark_802.11_v7.0.pdf](WiresharkLab/Wireshark实验-802.11/Wireshark_802.11_v7.0.pdf)
 * 翻译：[Wireshark_802.11_v7.0_Simplified_Chinese.pdf](WiresharkLab/Wireshark实验-802.11/Wireshark_802.11_v7.0_Simplified_Chinese.pdf) （[CHN-STUDENT](https://github.com/chn-student) )
@@ -165,6 +165,13 @@
 
 ***
 
-### 其他参考资料
+### 其他资源
 
 * 英文版：http://uniteng.com/wiki/doku.php?id=classlog:computer_networks
+* [ppt课件（第七版）](Resource/7th-ppt/)
+* [Python解答（第七版）](Resource/7th-Python-Solution/)
+* [Java解答（第七版）](Resource/7th-RetiredJavaSolutions/)
+* [Wireshark解答（第七版）](Resource/7th-Wireshark-Solution/)
+* [勘误（第七版）](Resource/7th-勘误-Errata.pdf)
+* [习题解答（第七版）](Resource/Solutions-7th-Edition.docx)
+
