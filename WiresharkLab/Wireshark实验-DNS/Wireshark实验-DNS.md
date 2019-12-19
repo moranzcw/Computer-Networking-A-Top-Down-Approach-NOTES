@@ -46,7 +46,7 @@
 
 在这个例子中，我们希望将查询请求发送到DNS服务器 bitsy.mit.edu ，而不是默认的DNS服务器（dns-prime.poly.edu）。因此，查询和响应事务直接发生在我们的主机和 bitsy.mit.edu 之间。在这个例子中，DNS服务器 bitsy.mit.edu 提供主机 www.aiit.or.kr 的IP地址，它是高级信息技术研究所（韩国）的Web服务器。
 
-现在我们了解了一些示例，您仙子啊可能想知道*nslookup*命令的一般语法。语法是：
+现在我们了解了一些示例，您现在可能想知道*nslookup*命令的一般语法。语法是：
 
 `nslookup -option1 -option2 host-to-find dns-server`
 
