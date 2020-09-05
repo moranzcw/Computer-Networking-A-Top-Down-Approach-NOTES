@@ -24,6 +24,7 @@
 # UDPPingerServer.py 
 # We will need the following module to generate randomized lost packets import random 
 from socket import * 
+import random
 
 # Create a UDP socket  
 # Notice the use of SOCK_DGRAM for UDP packets 
